@@ -14,6 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className="bg-white dark:bg-gray-900">
+      <head>
+        {/*Replace with actual GitHub repo name */}
+        <base href="PBLGroupG.github.io" />
+      </head>
       <body className="text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300 min-h-screen">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <header className="sticky top-0 bg-gray-800 text-white shadow-md z-50">
