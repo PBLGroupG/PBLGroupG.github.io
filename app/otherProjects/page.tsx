@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import clearMapImage from '/Users/enriqco/Downloads/pbl-next-tailwind-site/public/clear-map.png'
+import clearMapImage from '/Users/enriqco/Documents/Github2.0/PBLGroupG.github.io/public/clear-map.png'
 
 export default function OtherProjectsPage() {
   return (
