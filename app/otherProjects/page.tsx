@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import clearMapImage from '/Users/enriqco/Documents/Github2.0/PBLGroupG.github.io/public/clear-map.png'
+// import Image from 'next/image'
+// import clearMapImage from '/Users/enriqco/Documents/Github2.0/PBLGroupG.github.io/public/clear-map.png'
 
 export default function OtherProjectsPage() {
   return (
@@ -16,12 +16,12 @@ export default function OtherProjectsPage() {
         </p>
 
         <div className="rounded-lg overflow-hidden shadow-md border border-gray-300 dark:border-gray-700">
-          <Image
+          {/* <Image
             src={clearMapImage}
             alt="Chicago CLEARMap Interface"
             className="w-full h-auto object-cover"
             placeholder="blur"
-          />
+          /> */}
         </div>
 
         <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 text-justify">
