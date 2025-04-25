@@ -8,7 +8,7 @@ const groupMembers = [
   'Xu Junyi',
   'Dennis Stolboyov',
   'Nicolas Gallen',
-  'Sittatoworn Chidchanok',
+  'Chidchanok Sittitaworn ',
 ]
 
 export default function HomePage() {
