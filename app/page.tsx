@@ -6,8 +6,8 @@ const groupMembers = [
   'Alessandro Enriqco',
   'Yew Zhi Jie',
   'Xu Junyi',
-  'Dennis Stolboyov',
-  'Nicolas Gallen',
+  'Dennis Stolbovoy',
+  'Nicholas Gallen',
   'Chidchanok Sittitaworn ',
 ]
 
