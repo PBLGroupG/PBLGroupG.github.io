@@ -103,22 +103,22 @@ export default function ResearchPage() {
   ];
 
   return (
-    <section className="min-h-screen px-4 py-20 bg-gray-100 dark:bg-gray-900 transition-colors">
+    <section className="min-h-screen px-4 py-20 bg-gray-100 transition-colors">
       <div className="max-w-4xl mx-auto animate-fade-in">
-        <h1 className="text-center text-6xl font-bold text-gray-900 dark:text-gray-100 mb-12">
+        <h1 className="text-center text-6xl font-bold text-gray-900 mb-12">
           Research Literature
         </h1>
   
         {sections.map((section, idx) => (
           <div key={idx} className="mb-14">
-            <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100 mb-4">
+            <h2 className="text-3xl font-semibold text-gray-800 mb-4">
               {section.title}
             </h2>
   
-            <div className="max-h-96 overflow-y-auto border rounded-xl p-5 bg-white dark:bg-gray-800 shadow-md space-y-6">
+            <div className="max-h-96 overflow-y-auto border rounded-xl p-5 bg-white shadow-md space-y-6">
               {section.papers.map((paper, i) => (
                 <div key={i}>
-                  <p className="text-gray-800 dark:text-gray-200 font-medium">
+                  <p className="text-gray-800 font-medium">
                     <a
                       href={paper.link}
                       target="_blank"
@@ -128,7 +128,7 @@ export default function ResearchPage() {
                       {paper.citation}
                     </a>
                   </p>
-                  <p className="text-gray-600 dark:text-gray-400 text-justify">{paper.summary}</p>
+                  <p className="text-gray-600 text-justify">{paper.summary}</p>
                 </div>
               ))}
             </div>
