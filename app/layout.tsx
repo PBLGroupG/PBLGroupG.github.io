@@ -29,6 +29,7 @@ export default function RootLayout({
                 <a href="/" className="hover:underline hover:text-gray-300 transition">Home</a>
                 <a href="/research" className="hover:underline hover:text-gray-300 transition">Literature</a>
                 <a href="/otherProjects" className="hover:underline hover:text-gray-300 transition">Other Projects</a>
+                <a href="/document" className="hover:underline hover:text-gray-300 transition">Requirements Document</a>
                 <ThemeToggle />
               </nav>
             </div>
