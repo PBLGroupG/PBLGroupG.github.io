@@ -5,16 +5,6 @@ export default function DocumentPage() {
         <h1 className="text-center text-3xl font-bold mb-2">Software Requirements Specification (SRS)</h1>
         <h2 className="text-center text-xl font-medium mb-8">Crime Mapping and Forecasting Application</h2>
 
-
-        <div className="flex justify-center mb-8">
-          <img 
-            src="/Requirements.png" 
-            alt="Requirements Diagram" 
-            className="w-full max-w-2xl rounded shadow-md"
-          />
-        </div>
-
-
         <article className="space-y-6">
           <section>
             <h3 className="text-xl font-bold">Preface</h3>
@@ -22,7 +12,7 @@ export default function DocumentPage() {
             <p className="indent-6">This document is intended for use by the development team, instructors, testers, and future maintainers of the system.</p>
           </section>
 
-          <section>
+          <section id="section-1">
             <h3 className="text-xl font-bold">1. Introduction</h3>
             <p><strong>1.1 Purpose</strong></p>
             <p className="indent-6">The purpose of this document is to specify the functional and non-functional requirements of a software system designed to visualize crime data, predict time-based crime likelihood, and provide region-specific travel recommendations based on safety.</p>
@@ -38,9 +28,18 @@ export default function DocumentPage() {
               <li>SYS-NFR – System Non-Functional Requirement</li>
               <li>Region-based shading: Visualization technique that uses color to represent data intensity in distinct areas</li>
             </ul>
+
+            <p className="indent-6 mb-4">The following diagram illustrates a short overview on what the system would display</p>
+            <div className="flex justify-center">
+              <img 
+                src="/Requirements2.png" 
+                alt="Overview diagram showing how crime data is represented visually on the map" 
+                className="w-full max-w-2xl rounded shadow-md"
+              />
+            </div>
           </section>
 
-          <section>
+          <section id="section-2">
             <h3 className="text-xl font-bold">2. Glossary</h3>
             <ul className="list-disc list-inside ml-6">
               <li>Crime map: A visual representation of geographic crime data.</li>
@@ -51,8 +50,8 @@ export default function DocumentPage() {
             </ul>
           </section>
 
-          <section>
-            <h3 className="text-xl font-bold">3. User requirements</h3>
+          <section id="section-3">
+            <h3 className="text-xl font-bold">3. User Requirements</h3>
             <h4 className="font-semibold">3.1 User Functional Requirements</h4>
             <p className="mt-2 font-medium">Crime Visualization</p>
             <ul className="list-disc list-inside ml-6">
@@ -79,7 +78,17 @@ export default function DocumentPage() {
             </ul>
           </section>
 
-          <section>
+          <h3 className="text-xl font-bold mb-2">System Overview</h3>
+          <p className="indent-6 mb-4">The following diagram illustrates the system overview...</p>
+          <div className="flex justify-center">
+            <img 
+              src="/Requirements.png" 
+              alt="Diagram showing system input sources, data processing flow, and output visualization layers" 
+              className="w-full max-w-2xl rounded shadow-md"
+            />
+          </div>
+
+          <section id="section-4">
             <h3 className="text-xl font-bold">4. System Requirements</h3>
             <h4 className="font-semibold">4.1 System Functional Requirements</h4>
             <p className="mt-2 font-medium">Data Acquisition and Processing</p>
@@ -96,58 +105,77 @@ export default function DocumentPage() {
             <ul className="list-disc list-inside ml-6">
               <li>SYS-2.5: The system shall allow filtering of data by crime type and/or time range.</li>
               <li>SYS-2.6: The system should generate region-based travel recommendations based on user-defined crime tolerance.</li>
-              <li>The system shall remember which page the user leaves off when the user exits the application.</li>
+              <li>SYS-2.7: The system shall remember which page the user leaves off when the user exits the application.</li>
             </ul>
+
             <h4 className="mt-4 font-semibold">4.2 System Non-Functional Requirements</h4>
             <p className="mt-2 font-medium">Performance and Availability</p>
             <ul className="list-disc list-inside ml-6">
               <li>SYS-NFR-4.1: The system shall have 99% uptime over a rolling 30-day period.</li>
               <li>SYS-NFR-4.2: The system should render the map within 2 seconds for 90% of users on standard 4G connections.</li>
               <li>SYS-NFR-4.3: The system shall have a top-5 prediction accuracy of 70% or greater.</li>
-              <li>SYS-NFR-4.14: The system shall support concurrent access by at least 500 users without significant degradation in responsiveness (no more than 15% performance drop).</li>
-              <li>SYS-NFR-4.15: Crime prediction results shall be generated within 3 seconds under standard operating conditions.</li>
+              <li>SYS-NFR-4.4: The system shall support concurrent access by at least 500 users without significant degradation in responsiveness (no more than 15% performance drop).</li>
+              <li>SYS-NFR-4.5: Crime prediction results shall be generated within 3 seconds under standard operating conditions.</li>
             </ul>
             <p className="mt-2 font-medium">Scalability and Maintainability</p>
             <ul className="list-disc list-inside ml-6">
-              <li>SYS-NFR-4.4: The system codebase shall follow modular architecture principles to allow updates without affecting unrelated modules.</li>
-              <li>SYS-NFR-4.5: The system shall support horizontal scaling to handle increased user demand during peak usage hours.</li>
-              <li>SYS-NFR-4.6: Configuration changes (e.g., threshold for "high crime" indicators) shall be updatable without requiring system downtime.</li>
+              <li>SYS-NFR-4.6: The system codebase shall follow modular architecture principles to allow updates without affecting unrelated modules.</li>
+              <li>SYS-NFR-4.7: The system shall support horizontal scaling to handle increased user demand during peak usage hours.</li>
+              <li>SYS-NFR-4.8: Configuration changes (e.g., threshold for "high crime" indicators) shall be updatable without requiring system downtime.</li>
             </ul>
             <p className="mt-2 font-medium">Compatibility</p>
             <ul className="list-disc list-inside ml-6">
-              <li>SYS-NFR-4.4: The system shall be fully functional on mobile devices with &gt;=2GB RAM and Android 10/iOS 13 or newer.</li>
-              <li>SYS-NFR-4.5: The system shall be compatible with Windows 11+, macOS 11+, and Android 10+.</li>
+              <li>SYS-NFR-4.9: The system shall be fully functional on mobile devices with ≥2GB RAM and Android 10/iOS 13 or newer.</li>
+              <li>SYS-NFR-4.10: The system shall be compatible with Windows 11+, macOS 11+, and Android 10+.</li>
             </ul>
             <p className="mt-2 font-medium">Usability & Accessibility</p>
             <ul className="list-disc list-inside ml-6">
-              <li>SYS-NFR-4.20: The system interface shall allow new users to perform basic operations (e.g., viewing crime data) with no training and ≤3 clicks.</li>
-              <li>SYS-NFR-4.21: The system shall comply with WCAG 2.1 Level AA to ensure accessibility for users with disabilities.</li>
-              <li>SYS-NFR-4.22: A guided onboarding or tooltip system shall be available for first-time users to assist with feature discovery.</li>
+              <li>SYS-NFR-4.11: The system interface shall allow new users to perform basic operations (e.g., viewing crime data) with no training and ≤3 clicks.</li>
+              <li>SYS-NFR-4.12: The system shall comply with WCAG 2.1 Level AA to ensure accessibility for users with disabilities.</li>
+              <li>SYS-NFR-4.13: A guided onboarding or tooltip system shall be available for first-time users to assist with feature discovery.</li>
             </ul>
             <p className="mt-2 font-medium">Privacy and Ethics</p>
             <ul className="list-disc list-inside ml-6">
-              <li>SYS-NFR-4.6: The system shall not store any IP addresses or location data unless the user gives explicit consent.</li>
-              <li>SYS-NFR-4.7: The system shall implement privacy masking techniques to prevent the identification of individuals or addresses from crime data.</li>
-              <li>SYS-NFR-4.8: User data shall not be shared with third parties unless required by law or explicitly agreed to by the user.</li>
-              <li>SYS-NFR-4.9: The system shall log all data access and modification events for auditability, but only store logs that are anonymized.</li>
+              <li>SYS-NFR-4.14: The system shall not store any IP addresses or location data unless the user gives explicit consent.</li>
+              <li>SYS-NFR-4.15: The system shall implement privacy masking techniques to prevent the identification of individuals or addresses from crime data.</li>
+              <li>SYS-NFR-4.16: User data shall not be shared with third parties unless required by law or explicitly agreed to by the user.</li>
+              <li>SYS-NFR-4.17: The system shall log all data access and modification events for auditability, but only store logs that are anonymized.</li>
             </ul>
           </section>
 
-          <section>
+          <section id="section-5">
             <h3 className="text-xl font-bold">5. System Evolution</h3>
-            <p className="indent-6">As the system matures, we anticipate integrating additional datasets from other cities beyond Chicago. The forecasting model may evolve to incorporate more variables as their relationship to crime is established, and data for them becomes available.</p>
-            <p className="indent-6">As time goes on, we also anticipate that some data sources may become unavailable due to changing legal and industry environments. The software would necessarily need to be able to switch to other available sources of data.</p>
-            <p className="indent-6">The software should be designed for scalability, allowing modular data pipeline updates, and potentially supporting new features like push notifications or user-submitted crime reports.</p>
-            <p className="indent-6">Future releases may support multilingual interfaces and emergency service integration. API schema evolution should be anticipated, and compatibility with future operating systems and browsers maintained where feasible.</p>
+            <p className="indent-6">The following features and improvements are future-oriented concepts that are not currently implemented, but represent directions for potential expansion and refinement of the crime mapping and forecasting system. These ideas are based on anticipated user needs, feedback from surveys and focus groups, and limitations observed in the initial prototype.</p>
+            <p className="mt-4 font-medium">Data Sources and Forecasting Accuracy</p>
+            <p className="indent-6">Current Version: Uses historical crime data from the Chicago Police Department Open Data Portal.</p>
+            <p className="indent-6">Evolved Version: Integrates real-time feeds (if available), adds social indicators (e.g., public events, holidays), and improves accuracy through advanced time series forecasting (e.g., LSTM or Prophet). Data granularity could be refined from zone-based to street-level prediction.</p>
+            <p className="mt-4 font-medium">User Personalization and Alert System</p>
+            <p className="indent-6">Current Version: Basic filter and visualization with manual map navigation.</p>
+            <p className="indent-6">Evolved Version: Personalized crime alerts based on user-defined zones and preferences, with optional push notifications or email summaries.</p>
+            <p className="mt-4 font-medium">Multilingual and Accessibility Support</p>
+            <p className="indent-6">Current Version: Interface supports English only.</p>
+            <p className="indent-6">Evolved Version: Adds multilingual UI and screen reader support, potentially offering a "tourist mode" for simplified use.</p>
+            <p className="mt-4 font-medium">Integration with Emergency Services</p>
+            <p className="indent-6">Current Version: Static map and user-only interaction.</p>
+            <p className="indent-6">Evolved Version: Syncs with local emergency platforms for alerts or anonymous reporting (where legally feasible).</p>
+            <p className="mt-4 font-medium">Data Ethics and Privacy Enhancements</p>
+            <p className="indent-6">Current Version: Uses aggregated crime data with basic masking.</p>
+            <p className="indent-6">Evolved Version: Employs differential privacy or location blurring to prevent targeting of specific locations.</p>
+            <p className="mt-4 font-medium">Scalability and Platform Expansion</p>
+            <p className="indent-6">Current Version: Browser-based for mobile and desktop.</p>
+            <p className="indent-6">Evolved Version: Modular backend, API deployment, and dedicated dashboards for partners.</p>
+            <p className="mt-4 font-medium">Offline and Low-Resource Usage</p>
+            <p className="indent-6">Current Version: Requires internet and browser.</p>
+            <p className="indent-6">Evolved Version: Offers static map caching and lightweight rendering support.</p>
           </section>
 
-          <section>
+          <section id="section-index">
             <h3 className="text-xl font-bold">Index</h3>
             <ul className="list-disc list-inside ml-6">
-              <li>Functional Requirements – Section 3</li>
-              <li>Non-Functional Requirements – Section 4</li>
-              <li>System Evolution – Section 5</li>
-              <li>Glossary – Section 2</li>
+              <li><a href="#section-3" className="text-blue-600 underline">Functional Requirements – Section 3</a></li>
+              <li><a href="#section-4" className="text-blue-600 underline">Non-Functional Requirements – Section 4</a></li>
+              <li><a href="#section-5" className="text-blue-600 underline">System Evolution – Section 5</a></li>
+              <li><a href="#section-2" className="text-blue-600 underline">Glossary – Section 2</a></li>
             </ul>
           </section>
         </article>
