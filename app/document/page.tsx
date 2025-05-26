@@ -24,11 +24,11 @@ export default function DocumentPage() {
             <ul className="list-disc list-inside ml-6">
               <li><strong>SRS:</strong> Software Requirements Specification</li>
               <li><strong>UI:</strong> User Interface</li>
-              <li><strong>USR –</strong> User Functional Requirement</li>
-              <li><strong>SYS –</strong> System Functional Requirement</li>
-              <li><strong>USR-NFR –</strong> User Non-Functional Requirement</li>
-              <li><strong>SYS-NFR –</strong> System Non-Functional Requirement</li>
-              <li>Region-based shading: Visualization technique that uses color to represent data intensity in distinct areas</li>
+              <li><strong>USR : </strong> User Functional Requirement</li>
+              <li><strong>SYS : </strong> System Functional Requirement</li>
+              <li><strong>USR-NFR : </strong> User Non-Functional Requirement</li>
+              <li><strong>SYS-NFR : </strong> System Non-Functional Requirement</li>
+              <li><strong> Region-based shading: </strong> Visualization technique that uses color to represent data intensity in distinct areas</li>
             </ul>
             <div className="flex justify-center mt-6">
               <img
@@ -55,26 +55,26 @@ export default function DocumentPage() {
             <h4 className="text-xl font-semibold">3.1 User Functional Requirements</h4>
             <p className="mt-4 font-bold">Crime Visualization</p>
             <ul className="list-disc list-inside ml-6 space-y-1">
-              <li>USR-1.1: The user shall be able to view a map of Chicago split into distinct regions by community districts.</li>
-              <li>USR-1.2: The user shall be able to see indicators of crime levels and types within each region.</li>
-              <li>USR-1.3: The user shall be able to display detailed crime statistics in a selected area.</li>
+              <li>USR-1.1: The user shall be able to view a map of Chicago split into distinct regions by community districts. <i>(To help users understand which area they are navigating or analyzing.)</i></li>
+              <li>USR-1.2: The user shall be able to see indicators of crime levels and types within each region.<i>(To quickly assess safety and crime patterns.)</i></li>
+              <li>USR-1.3: The user shall be able to display detailed crime statistics in a selected area.<i> (For deeper insight.)</i></li>
             </ul>
             <p className="mt-4 font-bold">Travel Guidance and Personalization</p>
             <ul className="list-disc list-inside ml-6 space-y-1">
-              <li>USR-2.1: The user shall be able to view travel recommendations based on local crime levels.</li>
-              <li>USR-2.2: The user should be able to adjust their crime tolerance level to influence travel recommendations.</li>
+              <li>USR-2.1: The user shall be able to view travel recommendations based on local crime levels.<i>(To make safer travel decisions.)</i></li>
+              <li>USR-2.2: The user should be able to adjust their crime tolerance level to influence travel recommendations.<i>(To personalize system output.)</i></li>
             </ul>
             <p className="mt-4 font-bold">Data Filtering and Forecasting</p>
             <ul className="list-disc list-inside ml-6 space-y-1">
-              <li>USR-3.1: The user shall be able to filter crime data by type.</li>
-              <li>USR-3.2: The user should be able to view predicted likelihoods of specific crime types occurring in different regions and time windows, based on historical trends and model outputs.</li>
+              <li>USR-3.1: The user shall be able to filter crime data by type.<i>(To focus on personally relevant threats.)</i></li>
+              <li>USR-3.2: The user should be able to view predicted likelihoods of specific crime types occurring in different regions and time windows, based on historical trends and model outputs.<i>(For proactive planning.)</i></li>
             </ul>
             <h4 className="text-xl font-semibold mt-6">3.2 User Non-Functional Requirements</h4>
             <ul className="list-disc list-inside ml-6 space-y-1">
-              <li>USR-NFR-1.1: The user shall be able to use the system without prior technical knowledge.</li>
-              <li>USR-NFR-1.2: The user interface shall be clear, intuitive, and accessible on various devices.</li>
-              <li>USR-NFR-1.3: The system shall provide trustable, data-backed crime insights that users can rely on.</li>
-              <li>USR-NFR-1.4: The system should support the English language at minimum.</li>
+              <li>USR-NFR-1.1: The user shall be able to use the system without prior technical knowledge.<i>(To ensure accessibility for general users.)</i></li>
+              <li>USR-NFR-1.2: The user interface shall be clear, intuitive, and accessible on various devices.<i>(To ensure good usability.)</i></li>
+              <li>USR-NFR-1.3: The system shall provide trustable, data-backed crime insights that users can rely on.<i>(To build user confidence.) </i></li>
+              <li>USR-NFR-1.4: The system should support the English language at minimum.<i>(To ensure basic accessibility.)</i></li>
             </ul>
           </section>
 
@@ -84,74 +84,117 @@ export default function DocumentPage() {
   <h4 className="text-xl font-semibold">4.1 System Functional Requirements</h4>
   <p className="mt-4 font-bold">Data Acquisition and Processing</p>
   <ul className="list-disc list-inside ml-6 space-y-1">
-    <li>SYS-1.1: The system shall consistently retrieve Chicago police report data.</li>
-    <li>SYS-1.2: The system should forecast crime likelihood using a prediction model.</li>
+    <li>SYS-1.1: The system shall consistently retrieve Chicago police report data.<i>(To ensure up-to-date information.) </i></li>
+    <li>SYS-1.2: The system should forecast crime likelihood using a prediction model.<i>(To provide forward-looking insights.) </i></li>
   </ul>
 
   <p className="mt-4 font-bold">Map Generation and Display</p>
   <ul className="list-disc list-inside ml-6 space-y-1">
-    <li>SYS-2.1: The system shall generate an interactive map of Chicago divided according to Chicago's 77 official neighborhoods.</li>
-    <li>SYS-2.2: The system shall display crime intensity and type using region-based color shading.</li>
+    <li>SYS-2.1: The system shall generate an interactive map of Chicago divided according to Chicago's 77 official neighborhoods.<i>(To enable intuitive exploration.)</i></li>
+    <li>SYS-2.2: The system shall display crime intensity and type using region-based color shading.<i>(To communicate patterns clearly.)</i></li>
   </ul>
 
   <p className="mt-4 font-bold">User Interaction and Output</p>
   <ul className="list-disc list-inside ml-6 space-y-1">
-    <li>SYS-3.1: The system shall allow filtering of data by crime type and/or time range.</li>
-    <li>SYS-3.2: The system should generate region-based travel recommendations based on user-defined crime tolerance.</li>
-    <li>SYS-3.3: The system shall remember which page the user leaves off when the user exits the application.</li>
+    <li>SYS-3.1: The system shall allow filtering of data by crime type and/or time range.<i>(To enable data exploration.)</i></li>
+    <li>SYS-3.2: The system should generate region-based travel recommendations based on user-defined crime tolerance.<i>(To support personalized navigation decisions.)</i></li>
+    <li>SYS-3.3: The system shall remember which page the user leaves off when the user exits the application.<i>(To maintain continuity.)</i></li>
   </ul>
 
   <h4 className="text-xl font-semibold mt-6">4.2 System Non-Functional Requirements</h4>
   <p className="mt-4 font-bold">Performance and Availability</p>
   <ul className="list-disc list-inside ml-6 space-y-1">
-    <li>SYS-NFR-1.1: The system shall have 99% uptime over a rolling 30-day period.</li>
-    <li>SYS-NFR-1.2: The system should render the map within 2 seconds for 90% of users on standard 4G connections.</li>
-    <li>SYS-NFR-1.3: The system shall have a top-5 prediction accuracy of 70% or greater.</li>
-    <li>SYS-NFR-1.4: The system shall support concurrent access by at least 500 users with no more than 15% degradation in responsiveness.</li>
-    <li>SYS-NFR-1.5: Crime prediction results shall be generated within 3 seconds under standard operating conditions.</li>
+    <li>SYS-NFR-1.1: The system shall have 99% uptime over a rolling 30-day period.<i>(To ensure availability.)</i></li>
+    <li>SYS-NFR-1.2: The system should render the map within 2 seconds for 90% of users on standard 4G connections.<i>(To optimize performance.)</i></li>
+    <li>SYS-NFR-1.3: The system shall have a top-5 prediction accuracy of 70% or greater.<i>(To establish the reliability of the system.)</i></li>
+    <li>SYS-NFR-1.4: The system shall support concurrent access by at least 500 users with no more than 15% degradation in responsiveness.<i>(To ensure the application remains usable during peak hours or high-traffic scenarios.)</i></li>
+    <li>SYS-NFR-1.5: Crime prediction results shall be generated within 3 seconds under standard operating conditions.<i>(To provide timely feedback to users without interrupting navigation or planning decisions.)</i></li>
   </ul>
 
   <p className="mt-4 font-bold">Scalability and Maintainability</p>
   <ul className="list-disc list-inside ml-6 space-y-1">
-    <li>SYS-NFR-2.1: The system codebase shall follow modular architecture principles to allow updates without affecting unrelated modules.</li>
-    <li>SYS-NFR-2.2: The system shall support horizontal scaling to handle increased user demand during peak usage hours.</li>
-    <li>SYS-NFR-2.3: Configuration changes shall be updatable without requiring system downtime.</li>
+    <li>SYS-NFR-2.1: The system codebase shall follow modular architecture principles to allow updates without affecting unrelated modules.<i>(To support maintainability, facilitate future development, and reduce the risk of unintended bugs.)</i></li>
+    <li>SYS-NFR-2.2: The system shall support horizontal scaling to handle increased user demand during peak usage hours.<i>(To ensure consistent system performance as user load increases.)</i></li>
+    <li>SYS-NFR-2.3: Configuration changes shall be updatable without requiring system downtime.<i>(To support real-time system tuning and reduce disruption during updates.)</i></li>
   </ul>
 
   <p className="mt-4 font-bold">Compatibility</p>
   <ul className="list-disc list-inside ml-6 space-y-1">
-    <li>SYS-NFR-3.1: The system shall be fully functional on mobile devices with ≥2GB RAM and Android 10/iOS 13 or newer.</li>
-    <li>SYS-NFR-3.2: The system should be compatible with Windows 11+, macOS 11+, and Android 10+.</li>
+    <li>SYS-NFR-3.1: The system shall be fully functional on mobile devices with ≥2GB RAM and Android 10/iOS 13 or newer.<i>(To ensure mobile compatibility.)</i></li>
+    <li>SYS-NFR-3.2: The system should be compatible with Windows 11+, macOS 11+, and Android 10+.<i>(To support a broad user base.)</i></li>
   </ul>
 
   <p className="mt-4 font-bold">Usability & Accessibility</p>
   <ul className="list-disc list-inside ml-6 space-y-1">
-    <li>SYS-NFR-4.1: The system interface shall allow new users to perform basic operations with no training and ≤3 clicks.</li>
-    <li>SYS-NFR-4.2: The system should comply with WCAG 2.1 Level AA to ensure accessibility for users with disabilities.</li>
-    <li>SYS-NFR-4.3: A guided onboarding or tooltip system should be available for first-time users to assist with feature discovery.</li>
+    <li>SYS-NFR-4.1: The system interface shall allow new users to perform basic operations with no training and ≤3 clicks.<i>(To reduce friction for first-time users and support accessibility goals.)</i></li>
+    <li>SYS-NFR-4.2: The system should comply with WCAG 2.1 Level AA to ensure accessibility for users with disabilities.<i>(To provide inclusive access to all users, including those with visual or motor impairments.)</i></li>
+    <li>SYS-NFR-4.3: A guided onboarding or tooltip system should be available for first-time users to assist with feature discovery.<i>(To improve the onboarding experience and reduce confusion for new users.)</i></li>
   </ul>
 
   <p className="mt-4 font-bold">Privacy and Ethics</p>
   <ul className="list-disc list-inside ml-6 space-y-1">
-    <li>SYS-NFR-5.1: The system shall not store any IP addresses or location data unless the user gives explicit consent.</li>
-    <li>SYS-NFR-5.2: The system shall implement privacy masking techniques to prevent the identification of individuals or addresses from crime data.</li>
-    <li>SYS-NFR-5.3: User data shall not be shared with third parties unless required by law or explicitly agreed to by the user.</li>
-    <li>SYS-NFR-5.4: The system shall log all data access and modification events for auditability, but only store logs that are anonymized.</li>
+    <li>SYS-NFR-5.1: The system shall not store any IP addresses or location data unless the user gives explicit consent.<i>(To uphold user privacy.)</i></li>
+    <li>SYS-NFR-5.2: The system shall implement privacy masking techniques to prevent the identification of individuals or addresses from crime data.<i>(To prevent misuse or harm.)</i></li>
+    <li>SYS-NFR-5.3: User data shall not be shared with third parties unless required by law or explicitly agreed to by the user.<i>(To uphold user privacy and trust, and to comply with legal data protection standards.)</i></li>
+    <li>SYS-NFR-5.4: The system shall log all data access and modification events for auditability, but only store logs that are anonymized.<i>(To enable accountability while protecting user identity and behavior.)</i></li>
   </ul>
 </section>
 
 <section className="space-y-6">
   <h3 className="text-2xl font-bold border-b pb-1">5. System Evolution</h3>
   <p className="indent-6">The following features and improvements are future-oriented concepts that are not currently implemented, but represent directions for potential expansion and refinement of the crime mapping and forecasting system. These ideas are based on anticipated user needs, feedback from surveys and focus groups, and limitations observed in the initial prototype.</p>
-  <ul className="list-disc list-inside ml-6 space-y-2">
-    <li><strong>Data Sources and Forecasting Accuracy</strong><br/>Current Version: Uses historical crime data from the Chicago Police Department Open Data Portal.<br/>Evolved Version: Integrates real-time feeds (if available), adds social indicators (e.g., public events, holidays), and improves accuracy through advanced time series forecasting (e.g., LSTM or Prophet). Data granularity could be refined from zone-based to street-level prediction.</li>
-    <li><strong>User Personalization and Alert System</strong><br/>Current Version: Basic filter and visualization with manual map navigation.<br/>Evolved Version: Personalized crime alerts based on user-defined zones and preferences (e.g., “warn me about violent crimes within 1km of my location”), with optional push notifications or email summaries.</li>
-    <li><strong>Multilingual and Accessibility Support</strong><br/>Current Version: Interface supports English only.<br/>Evolved Version: Adds multilingual UI (e.g., Japanese, Chinese, Spanish) and screen reader support for accessibility compliance (WCAG 2.1). Could also include a simplified “tourist mode.”</li>
-    <li><strong>Integration with Emergency Services</strong><br/>Current Version: Static map and user-only interaction.<br/>Evolved Version: Optionally syncs with local emergency services or municipal safety platforms to provide recent alerts, crime resolution updates, or allow anonymous reporting (subject to legal feasibility).</li>
-    <li><strong>Data Ethics and Privacy Enhancements</strong><br/>Current Version: Uses aggregated crime data with basic privacy masking.<br/>Evolved Version: Implements differential privacy or location blurring algorithms to prevent targeting of specific buildings or individuals. Potential integration with third-party review boards for transparency.</li>
-    <li><strong>Scalability and Platform Expansion</strong><br/>Current Version: Browser-based application optimized for mobile and desktop.<br/>Evolved Version: Modular backend supporting API-based deployment, potential iOS and Android native apps, and dedicated dashboards for government or research partners.</li>
-    <li><strong>Offline and Low-Resource Usage</strong><br/>Current Version: Requires stable internet and browser support.<br/>Evolved Version: Offers static map caching for offline browsing and optimized rendering for older devices using lightweight frameworks (e.g., Preact or WebGL-based vector tiles).</li>
-  </ul>
+
+  <div className="space-y-6">
+    <div>
+      <h4 className="text-xl font-semibold">Data Sources and Forecasting Accuracy</h4>
+      <ul className="list-disc list-inside ml-6 space-y-1">
+        <li><strong>Current Version:</strong> Uses historical crime data from the Chicago Police Department Open Data Portal.</li>
+        <li><strong>Evolved Version:</strong> Integrates real-time feeds (if available), adds social indicators (e.g., public events, holidays), and improves accuracy through advanced time series forecasting (e.g., LSTM or Prophet). Data granularity could be refined from zone-based to street-level prediction.</li>
+      </ul>
+    </div>
+    <div>
+      <h4 className="text-xl font-semibold">User Personalization and Alert System</h4>
+      <ul className="list-disc list-inside ml-6 space-y-1">
+        <li><strong>Current Version:</strong> Basic filter and visualization with manual map navigation.</li>
+        <li><strong>Evolved Version:</strong> Personalized crime alerts based on user-defined zones and preferences (e.g., “warn me about violent crimes within 1km of my location”), with optional push notifications or email summaries.</li>
+      </ul>
+    </div>
+    <div>
+      <h4 className="text-xl font-semibold">Multilingual and Accessibility Support</h4>
+      <ul className="list-disc list-inside ml-6 space-y-1">
+        <li><strong>Current Version:</strong> Interface supports English only.</li>
+        <li><strong>Evolved Version:</strong> Adds multilingual UI (e.g., Japanese, Chinese, Spanish) and screen reader support for accessibility compliance (WCAG 2.1). Could also include a simplified “tourist mode.”</li>
+      </ul>
+    </div>
+    <div>
+      <h4 className="text-xl font-semibold">Integration with Emergency Services</h4>
+      <ul className="list-disc list-inside ml-6 space-y-1">
+        <li><strong>Current Version:</strong> Static map and user-only interaction.</li>
+        <li><strong>Evolved Version:</strong> Optionally syncs with local emergency services or municipal safety platforms to provide recent alerts, crime resolution updates, or allow anonymous reporting (subject to legal feasibility).</li>
+      </ul>
+    </div>
+    <div>
+      <h4 className="text-xl font-semibold">Data Ethics and Privacy Enhancements</h4>
+      <ul className="list-disc list-inside ml-6 space-y-1">
+        <li><strong>Current Version:</strong> Uses aggregated crime data with basic privacy masking.</li>
+        <li><strong>Evolved Version:</strong> Implements differential privacy or location blurring algorithms to prevent targeting of specific buildings or individuals. Potential integration with third-party review boards for transparency.</li>
+      </ul>
+    </div>
+    <div>
+      <h4 className="text-xl font-semibold">Scalability and Platform Expansion</h4>
+      <ul className="list-disc list-inside ml-6 space-y-1">
+        <li><strong>Current Version:</strong> Browser-based application optimized for mobile and desktop.</li>
+        <li><strong>Evolved Version:</strong> Modular backend supporting API-based deployment, potential iOS and Android native apps, and dedicated dashboards for government or research partners.</li>
+      </ul>
+    </div>
+    <div>
+      <h4 className="text-xl font-semibold">Offline and Low-Resource Usage</h4>
+      <ul className="list-disc list-inside ml-6 space-y-1">
+        <li><strong>Current Version:</strong> Requires stable internet and browser support.</li>
+        <li><strong>Evolved Version:</strong> Offers static map caching for offline browsing and optimized rendering for older devices using lightweight frameworks (e.g., Preact or WebGL-based vector tiles).</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <section className="space-y-6">
