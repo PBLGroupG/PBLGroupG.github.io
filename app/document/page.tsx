@@ -73,7 +73,7 @@ export default function DocumentPage() {
             <ul className="list-disc list-inside ml-6 space-y-1">
               <li>USR-NFR-1.1: The user shall be able to use the system without prior technical knowledge.<i> (To ensure accessibility for general users.)</i></li>
               <li>USR-NFR-1.2: The user interface shall be clear, intuitive, and accessible on various devices.<i> (To ensure good usability.)</i></li>
-              <li>USR-NFR-1.3: The system shall provide trustable, data-backed crime insights that users can rely on.<i>( To build user confidence.) </i></li>
+              <li>USR-NFR-1.3: The system shall provide trustable, data-backed crime insights that users can rely on.<i> (To build user confidence.) </i></li>
               <li>USR-NFR-1.4: The system should support the English language at minimum.<i> (To ensure basic accessibility.)</i></li>
             </ul>
           </section>
@@ -146,49 +146,49 @@ export default function DocumentPage() {
 
   <div className="space-y-6">
     <div>
-      <h4 className="text-xl font-semibold">Data Sources and Forecasting Accuracy</h4>
+      <h4 className="text-xl font-semibold mt-6" >Data Sources and Forecasting Accuracy</h4>
       <ul className="list-disc list-inside ml-6 space-y-1">
         <li><strong>Current Version:</strong> Uses historical crime data from the Chicago Police Department Open Data Portal.</li>
         <li><strong>Evolved Version:</strong> Integrates real-time feeds (if available), adds social indicators (e.g., public events, holidays), and improves accuracy through advanced time series forecasting (e.g., LSTM or Prophet). Data granularity could be refined from zone-based to street-level prediction.</li>
       </ul>
     </div>
     <div>
-      <h4 className="text-xl font-semibold">User Personalization and Alert System</h4>
+      <h4 className="text-xl font-semibold mt-6">User Personalization and Alert System</h4>
       <ul className="list-disc list-inside ml-6 space-y-1">
         <li><strong>Current Version:</strong> Basic filter and visualization with manual map navigation.</li>
         <li><strong>Evolved Version:</strong> Personalized crime alerts based on user-defined zones and preferences (e.g., “warn me about violent crimes within 1km of my location”), with optional push notifications or email summaries.</li>
       </ul>
     </div>
     <div>
-      <h4 className="text-xl font-semibold">Multilingual and Accessibility Support</h4>
+      <h4 className="text-xl font-semibold mt-6">Multilingual and Accessibility Support</h4>
       <ul className="list-disc list-inside ml-6 space-y-1">
         <li><strong>Current Version:</strong> Interface supports English only.</li>
         <li><strong>Evolved Version:</strong> Adds multilingual UI (e.g., Japanese, Chinese, Spanish) and screen reader support for accessibility compliance (WCAG 2.1). Could also include a simplified “tourist mode.”</li>
       </ul>
     </div>
     <div>
-      <h4 className="text-xl font-semibold">Integration with Emergency Services</h4>
+      <h4 className="text-xl font-semibold mt-6">Integration with Emergency Services</h4>
       <ul className="list-disc list-inside ml-6 space-y-1">
         <li><strong>Current Version:</strong> Static map and user-only interaction.</li>
         <li><strong>Evolved Version:</strong> Optionally syncs with local emergency services or municipal safety platforms to provide recent alerts, crime resolution updates, or allow anonymous reporting (subject to legal feasibility).</li>
       </ul>
     </div>
     <div>
-      <h4 className="text-xl font-semibold">Data Ethics and Privacy Enhancements</h4>
+      <h4 className="text-xl font-semibold mt-6">Data Ethics and Privacy Enhancements</h4>
       <ul className="list-disc list-inside ml-6 space-y-1">
         <li><strong>Current Version:</strong> Uses aggregated crime data with basic privacy masking.</li>
         <li><strong>Evolved Version:</strong> Implements differential privacy or location blurring algorithms to prevent targeting of specific buildings or individuals. Potential integration with third-party review boards for transparency.</li>
       </ul>
     </div>
     <div>
-      <h4 className="text-xl font-semibold">Scalability and Platform Expansion</h4>
+      <h4 className="text-xl font-semibold mt-6">Scalability and Platform Expansion</h4>
       <ul className="list-disc list-inside ml-6 space-y-1">
         <li><strong>Current Version:</strong> Browser-based application optimized for mobile and desktop.</li>
         <li><strong>Evolved Version:</strong> Modular backend supporting API-based deployment, potential iOS and Android native apps, and dedicated dashboards for government or research partners.</li>
       </ul>
     </div>
     <div>
-      <h4 className="text-xl font-semibold">Offline and Low-Resource Usage</h4>
+      <h4 className="text-xl font-semibold mt-6">Offline and Low-Resource Usage</h4>
       <ul className="list-disc list-inside ml-6 space-y-1">
         <li><strong>Current Version:</strong> Requires stable internet and browser support.</li>
         <li><strong>Evolved Version:</strong> Offers static map caching for offline browsing and optimized rendering for older devices using lightweight frameworks (e.g., Preact or WebGL-based vector tiles).</li>
