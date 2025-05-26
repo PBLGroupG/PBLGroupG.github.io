@@ -1,111 +1,130 @@
-
-    export default function DocumentPage() {
-        return (
-          <section className="min-h-screen px-6 py-20 bg-white text-black transition-colors">
-            <div className="max-w-5xl mx-auto space-y-6">
-              <h1 className="text-center text-4xl font-bold">
-                Software Requirements Specification (SRS)
-              </h1>
-              <h2 className="text-2xl font-semibold">
-                Crime Mapping and Forecasting Application
-              </h2>
-      
-              <div className="space-y-4">
-                {`
-      Preface
-      This Software Requirements Specification (SRS) document has been prepared by Group G for the PBL3 course project. It outlines the requirements for the development of a crime mapping and forecasting application focused on the city of Chicago. The application aims to assist users in understanding local crime patterns and making informed decisions about travel and safety.
-      This document is intended for use by the development team, instructors, testers, and future maintainers of the system.
-      
-      1. Introduction
-      1.1 Purpose
-      The purpose of this document is to specify the functional and non-functional requirements of a software system designed to visualize crime data, predict time-based crime likelihood, and provide region-specific travel recommendations based on safety.
-      1.2 Scope
-      This application will retrieve police report data from public sources and display aggregated crime data using a region-based map of Chicago. The system will offer features such as filtering by crime type, forecasting crime likelihood, and customizable travel safety recommendations. The target users include present and prospective residents, students, and travelers seeking insights into the safety of specific areas.
-      1.3 Definitions, Acronyms, and Abbreviations
-      SRS: Software Requirements Specification
-      UI: User Interface
-      USR – User Functional Requirement
-      SYS – System Functional Requirement
-      USR-NFR – User Non-Functional Requirement
-      SYS-NFR – System Non-Functional Requirement
-      Region-based shading: Visualization technique that uses color to represent data intensity in distinct areas
-      
-      2. Glossary
-      Crime map: A visual representation of geographic crime data.
-      Crime tolerance: A user-defined threshold for crime exposure used to tailor travel advice.
-      Privacy masking: Techniques used to anonymize sensitive location data.
-      Forecasting model: A statistical or machine learning method that predicts future crime likelihood.
-      Top-5 accuracy: The proportion of real crimes that occur within the top 5 most likely areas predicted by the model.
-      
-      3. User requirements
-      3.1 User Functional Requirements
-      Crime Visualization
-      USR-1.1: The user shall be able to view a map of Chicago split into distinct regions by community districts. (To help users understand which area they are navigating or analyzing.)
-      USR-1.2: The user shall be able to see indicators of crime levels and types within each region. (To quickly assess safety and crime patterns.)
-      USR-1.3: The user shall be able to display detailed crime statistics in a selected area. (For deeper insight.)
-      Travel Guidance and Personalization
-      USR-1.4: The user shall be able to view travel recommendations based on local crime levels. (To make safer travel decisions.)
-      USR-1.5: The user should be able to adjust their crime tolerance level to influence travel recommendations. (To personalize system output.)
-      Data Filtering and Forecasting
-      USR-1.6: The user shall be able to filter crime data by type. (To focus on personally relevant threats.)
-      USR-1.7: The user should be able to view the predicted likelihood of specific crimes occurring in different regions. (For proactive planning.)
-      3.2 User Non-Functional Requirements
-      USR-NFR-3.1: The user shall be able to use the system without prior technical knowledge. (To ensure accessibility for general users.)
-      USR-NFR-3.2: The user interface shall be clear, intuitive, and accessible on various devices. (To ensure good usability.)
-      USR-NFR-3.3: The system shall provide trustable, data-backed crime insights that users can rely on. (To build user confidence.)
-      The system shall support the English language at minimum. (To ensure basic accessibility.)
-      
-      4. System Requirements
-      4.1 System Functional Requirements
-      Data Acquisition and Processing
-      SYS-2.1: The system shall consistently retrieve Chicago police report data. (To ensure up-to-date information.)
-      SYS-2.2: The system should forecast crime likelihood using a prediction model. (To provide forward-looking insights.)
-      Map Generation and Display
-      SYS-2.3: The system shall generate an interactive map of Chicago divided according to Chicago's 77 official neighborhoods. (To enable intuitive exploration.)
-      SYS-2.4: The system shall display crime intensity and type using region-based color shading. (To communicate patterns clearly.)
-      User Interaction and Output
-      SYS-2.5: The system shall allow filtering of data by crime type and/or time range. (To enable data exploration.)
-      SYS-2.6: The system should generate region-based travel recommendations based on user-defined crime tolerance. (To support personalized navigation decisions.)
-      The system shall remember which page the user leaves off when the user exits the application. (To maintain continuity.)
-      
-      4.2 System Non-Functional Requirements
-      Performance and Availability
-      SYS-NFR-4.1: The system shall have 99% uptime over a rolling 30-day period. (To ensure availability.)
-      SYS-NFR-4.2: The system should render the map within 2 seconds for 90% of users on standard 4G connections. (To optimize performance.)
-      SYS-NFR-4.3: The system shall have a top-5 prediction accuracy of 70% or greater. (To establish the reliability of the system.)
-      SYS-NFR-4.14: The system shall support concurrent access by at least 500 users without significant degradation in responsiveness (no more than 15% performance drop).
-      SYS-NFR-4.15: Crime prediction results shall be generated within 3 seconds under standard operating conditions.
-      Scalability and Maintainability
-      SYS-NFR-4.4: The system codebase shall follow modular architecture principles to allow updates without affecting unrelated modules.
-      SYS-NFR-4.5: The system shall support horizontal scaling to handle increased user demand during peak usage hours.
-      SYS-NFR-4.6: Configuration changes (e.g., threshold for "high crime" indicators) shall be updatable without requiring system downtime.
-      Compatibility
-      SYS-NFR-4.16: The system shall be fully functional on mobile devices with >=2GB RAM and Android 10/iOS 13 or newer. (To ensure mobile compatibility.)
-      SYS-NFR-4.17: The system shall be compatible with Windows 11+, macOS 11+, and Android 10+. (To support a broad user base.)
-      Usability & Accessibility
-      SYS-NFR-4.18: The system interface shall allow new users to perform basic operations (e.g., viewing crime data) with no training and ≤3 clicks.
-      SYS-NFR-4.19: The system shall comply with WCAG 2.1 Level AA to ensure accessibility for users with disabilities.
-      SYS-NFR-4.20: A guided onboarding or tooltip system shall be available for first-time users to assist with feature discovery.
-      Privacy and Ethics
-      SYS-NFR-4.21: The system shall not store any IP addresses or location data unless the user gives explicit consent. (To uphold user privacy.)
-      SYS-NFR-4.22: The system shall implement privacy masking techniques to prevent the identification of individuals or addresses from crime data. (To prevent misuse or harm.)
-      SYS-NFR-4.23: User data shall not be shared with third parties unless required by law or explicitly agreed to by the user.
-      SYS-NFR-4.24: The system shall log all data access and modification events for auditability, but only store logs that are anonymized.
-      
-      5. System Evolution
-      As the system matures, we anticipate integrating additional datasets from other cities beyond Chicago. The forecasting model may evolve to incorporate more variables as their relationship to crime is established, and data for them becomes available.
-      As time goes on, we also anticipate that some data sources may become unavailable due to changing legal and industry environments. The software would necessarily need to be able to switch to other available sources of data.
-      The software should be designed for scalability, allowing modular data pipeline updates, and potentially supporting new features like push notifications or user-submitted crime reports.
-      Future releases may support multilingual interfaces and emergency service integration. API schema evolution should be anticipated, and compatibility with future operating systems and browsers maintained where feasible.
-      
-      Index
-      Functional Requirements – Section 3
-      Non-Functional Requirements – Section 4
-      System Evolution – Section 5
-      Glossary – Section 2
-                `}
-              </div>
-            </div>
-          </section>
-        );
-      }
+export default function DocumentPage() {
+    return (
+      <section className="min-h-screen px-6 py-20 bg-white text-black transition-colors">
+        <div className="max-w-4xl mx-auto space-y-10">
+          <h1 className="text-center text-4xl font-bold">
+            Software Requirements Specification (SRS)
+          </h1>
+          <h2 className="text-2xl font-semibold text-center">
+            Crime Mapping and Forecasting Application
+          </h2>
+  
+          <article className="space-y-6">
+            <section>
+              <h3 className="text-xl font-bold">Preface</h3>
+              <p>
+                This Software Requirements Specification (SRS) document has been prepared by Group G for the PBL3 course
+                project. It outlines the requirements for the development of a crime mapping and forecasting application
+                focused on the city of Chicago. The application aims to assist users in understanding local crime patterns
+                and making informed decisions about travel and safety.
+              </p>
+              <p>
+                This document is intended for use by the development team, instructors, testers, and future maintainers of
+                the system.
+              </p>
+            </section>
+  
+            <section>
+              <h3 className="text-xl font-bold">1. Introduction</h3>
+              <p><strong>1.1 Purpose</strong><br />
+                The purpose of this document is to specify the functional and non-functional requirements of a software
+                system designed to visualize crime data, predict time-based crime likelihood, and provide region-specific
+                travel recommendations based on safety.
+              </p>
+              <p><strong>1.2 Scope</strong><br />
+                This application will retrieve police report data from public sources and display aggregated crime data
+                using a region-based map of Chicago. The system will offer features such as filtering by crime type,
+                forecasting crime likelihood, and customizable travel safety recommendations.
+              </p>
+              <p><strong>1.3 Definitions, Acronyms, and Abbreviations</strong><br />
+                SRS: Software Requirements Specification<br />
+                UI: User Interface<br />
+                USR – User Functional Requirement<br />
+                SYS – System Functional Requirement<br />
+                USR-NFR – User Non-Functional Requirement<br />
+                SYS-NFR – System Non-Functional Requirement<br />
+                Region-based shading: Visualization technique that uses color to represent data intensity in distinct areas
+              </p>
+            </section>
+  
+            <section>
+              <h3 className="text-xl font-bold">2. Glossary</h3>
+              <ul className="list-disc list-inside space-y-1">
+                <li><strong>Crime map:</strong> A visual representation of geographic crime data.</li>
+                <li><strong>Crime tolerance:</strong> A user-defined threshold for crime exposure used to tailor travel advice.</li>
+                <li><strong>Privacy masking:</strong> Techniques used to anonymize sensitive location data.</li>
+                <li><strong>Forecasting model:</strong> A statistical or machine learning method that predicts future crime likelihood.</li>
+                <li><strong>Top-5 accuracy:</strong> The proportion of real crimes that occur within the top 5 most likely areas predicted by the model.</li>
+              </ul>
+            </section>
+  
+            <section>
+              <h3 className="text-xl font-bold">3. User Requirements</h3>
+              <h4 className="font-semibold">3.1 User Functional Requirements</h4>
+              <ul className="list-disc list-inside space-y-1">
+                <li>USR-1.1 to USR-1.3: Map visualization and statistics.</li>
+                <li>USR-1.4 to USR-1.5: Travel recommendations and tolerance personalization.</li>
+                <li>USR-1.6 to USR-1.7: Crime filtering and prediction features.</li>
+              </ul>
+              <h4 className="font-semibold mt-4">3.2 User Non-Functional Requirements</h4>
+              <ul className="list-disc list-inside space-y-1">
+                <li>USR-NFR-3.1 to 3.3: Ease of use, UI clarity, and data reliability.</li>
+                <li>The system shall support the English language at minimum.</li>
+              </ul>
+            </section>
+  
+            <section>
+              <h3 className="text-xl font-bold">4. System Requirements</h3>
+              <h4 className="font-semibold">4.1 System Functional Requirements</h4>
+              <ul className="list-disc list-inside space-y-1">
+                <li>SYS-2.1 to SYS-2.2: Data retrieval and forecasting.</li>
+                <li>SYS-2.3 to SYS-2.4: Interactive map and shading.</li>
+                <li>SYS-2.5 to SYS-2.6: Filtering, recommendations, and session persistence.</li>
+              </ul>
+              <h4 className="font-semibold mt-4">4.2 System Non-Functional Requirements</h4>
+              <p className="font-semibold">Performance and Availability</p>
+              <ul className="list-disc list-inside space-y-1">
+                <li>SYS-NFR-4.1 to 4.3: Uptime, performance, prediction accuracy.</li>
+                <li>SYS-NFR-4.14 to 4.15: Concurrent users and response time.</li>
+              </ul>
+              <p className="font-semibold mt-2">Scalability and Maintainability</p>
+              <ul className="list-disc list-inside space-y-1">
+                <li>SYS-NFR-4.4 to 4.6: Modular architecture, horizontal scaling, configurable parameters.</li>
+              </ul>
+              <p className="font-semibold mt-2">Compatibility</p>
+              <ul className="list-disc list-inside space-y-1">
+                <li>SYS-NFR-4.16 to 4.17: Mobile and OS compatibility.</li>
+              </ul>
+              <p className="font-semibold mt-2">Usability & Accessibility</p>
+              <ul className="list-disc list-inside space-y-1">
+                <li>SYS-NFR-4.18 to 4.20: Simple onboarding, WCAG 2.1 AA compliance.</li>
+              </ul>
+              <p className="font-semibold mt-2">Privacy and Ethics</p>
+              <ul className="list-disc list-inside space-y-1">
+                <li>SYS-NFR-4.21 to 4.24: Consent-based data, anonymized logs, masking, no unauthorized sharing.</li>
+              </ul>
+            </section>
+  
+            <section>
+              <h3 className="text-xl font-bold">5. System Evolution</h3>
+              <p>
+                Future system updates may include support for additional cities, expanded forecasting logic, new data sources,
+                push notifications, and multilingual support. It will maintain modularity to support new features, data,
+                and platform compatibility over time.
+              </p>
+            </section>
+  
+            <section>
+              <h3 className="text-xl font-bold">Index</h3>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Functional Requirements – Section 3</li>
+                <li>Non-Functional Requirements – Section 4</li>
+                <li>System Evolution – Section 5</li>
+                <li>Glossary – Section 2</li>
+              </ul>
+            </section>
+          </article>
+        </div>
+      </section>
+    );
+  }
