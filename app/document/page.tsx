@@ -10,16 +10,16 @@ export default function DocumentPage() {
         <article className="space-y-14">
           <section className="space-y-6">
             <h3 className="text-2xl font-bold border-b pb-1">Preface</h3>
-            <p className="indent-6">This Software Requirements Specification (SRS) document has been prepared by Group G for the PBL3 course project. It outlines the requirements for the development of a crime mapping and forecasting application focused on the city of Chicago. The application aims to assist users in understanding local crime patterns and making informed decisions about travel and safety.</p>
-            <p className="indent-6">This document is intended for use by the development team, instructors, testers, and future maintainers of the system.</p>
+            <p>This Software Requirements Specification (SRS) document has been prepared by Group G for the PBL3 course project. It outlines the requirements for the development of a crime mapping and forecasting application focused on the city of Chicago. The application aims to assist users in understanding local crime patterns and making informed decisions about travel and safety.</p>
+            <p>This document is intended for use by the development team, instructors, testers, and future maintainers of the system.</p>
           </section>
 
           <section className="space-y-6">
             <h3 className="text-2xl font-bold border-b pb-1">1. Introduction</h3>
             <p><strong>1.1 Purpose</strong></p>
-            <p className="indent-6">The purpose of this document is to specify the functional and non-functional requirements of a software system designed to visualize crime data, predict time-based crime likelihood, and provide region-specific travel recommendations based on safety.</p>
+            <p>The purpose of this document is to specify the functional and non-functional requirements of a software system designed to visualize crime data, predict time-based crime likelihood, and provide region-specific travel recommendations based on safety.</p>
             <p><strong>1.2 Scope</strong></p>
-            <p className="indent-6">This application will retrieve police report data from public sources and display aggregated crime data using a region-based map of Chicago. The system will offer features such as filtering by crime type, forecasting crime likelihood, and customizable travel safety recommendations. The target users include present and prospective residents, students, and travelers seeking insights into the safety of specific areas.</p>
+            <p>This application will retrieve police report data from public sources and display aggregated crime data using a region-based map of Chicago. The system will offer features such as filtering by crime type, forecasting crime likelihood, and customizable travel safety recommendations. The target users include present and prospective residents, students, and travelers seeking insights into the safety of specific areas.</p>
             <p><strong>1.3 Definitions, Acronyms, and Abbreviations</strong></p>
             <ul className="list-disc list-inside ml-6">
               <li><strong>SRS:</strong> Software Requirements Specification</li>
@@ -55,26 +55,26 @@ export default function DocumentPage() {
             <h4 className="text-xl font-semibold">3.1 User Functional Requirements</h4>
             <p className="mt-4 font-bold">Crime Visualization</p>
             <ul className="list-disc list-inside ml-6 space-y-1">
-              <li>USR-1.1: The user shall be able to view a map of Chicago split into distinct regions by community districts. <i>(To help users understand which area they are navigating or analyzing.)</i></li>
-              <li>USR-1.2: The user shall be able to see indicators of crime levels and types within each region.<i>(To quickly assess safety and crime patterns.)</i></li>
+              <li>USR-1.1: The user shall be able to view a map of Chicago split into distinct regions by community districts. <i> (To help users understand which area they are navigating or analyzing.)</i></li>
+              <li>USR-1.2: The user shall be able to see indicators of crime levels and types within each region.<i> (To quickly assess safety and crime patterns.)</i></li>
               <li>USR-1.3: The user shall be able to display detailed crime statistics in a selected area.<i> (For deeper insight.)</i></li>
             </ul>
             <p className="mt-4 font-bold">Travel Guidance and Personalization</p>
             <ul className="list-disc list-inside ml-6 space-y-1">
-              <li>USR-2.1: The user shall be able to view travel recommendations based on local crime levels.<i>(To make safer travel decisions.)</i></li>
-              <li>USR-2.2: The user should be able to adjust their crime tolerance level to influence travel recommendations.<i>(To personalize system output.)</i></li>
+              <li>USR-2.1: The user shall be able to view travel recommendations based on local crime levels.<i> (To make safer travel decisions.)</i></li>
+              <li>USR-2.2: The user should be able to adjust their crime tolerance level to influence travel recommendations.<i> (To personalize system output.)</i></li>
             </ul>
             <p className="mt-4 font-bold">Data Filtering and Forecasting</p>
             <ul className="list-disc list-inside ml-6 space-y-1">
-              <li>USR-3.1: The user shall be able to filter crime data by type.<i>(To focus on personally relevant threats.)</i></li>
-              <li>USR-3.2: The user should be able to view predicted likelihoods of specific crime types occurring in different regions and time windows, based on historical trends and model outputs.<i>(For proactive planning.)</i></li>
+              <li>USR-3.1: The user shall be able to filter crime data by type.<i> (To focus on personally relevant threats.)</i></li>
+              <li>USR-3.2: The user should be able to view predicted likelihoods of specific crime types occurring in different regions and time windows, based on historical trends and model outputs.<i> (For proactive planning.)</i></li>
             </ul>
             <h4 className="text-xl font-semibold mt-6">3.2 User Non-Functional Requirements</h4>
             <ul className="list-disc list-inside ml-6 space-y-1">
-              <li>USR-NFR-1.1: The user shall be able to use the system without prior technical knowledge.<i>(To ensure accessibility for general users.)</i></li>
-              <li>USR-NFR-1.2: The user interface shall be clear, intuitive, and accessible on various devices.<i>(To ensure good usability.)</i></li>
-              <li>USR-NFR-1.3: The system shall provide trustable, data-backed crime insights that users can rely on.<i>(To build user confidence.) </i></li>
-              <li>USR-NFR-1.4: The system should support the English language at minimum.<i>(To ensure basic accessibility.)</i></li>
+              <li>USR-NFR-1.1: The user shall be able to use the system without prior technical knowledge.<i> (To ensure accessibility for general users.)</i></li>
+              <li>USR-NFR-1.2: The user interface shall be clear, intuitive, and accessible on various devices.<i> (To ensure good usability.)</i></li>
+              <li>USR-NFR-1.3: The system shall provide trustable, data-backed crime insights that users can rely on.<i>( To build user confidence.) </i></li>
+              <li>USR-NFR-1.4: The system should support the English language at minimum.<i> (To ensure basic accessibility.)</i></li>
             </ul>
           </section>
 
@@ -84,14 +84,14 @@ export default function DocumentPage() {
   <h4 className="text-xl font-semibold">4.1 System Functional Requirements</h4>
   <p className="mt-4 font-bold">Data Acquisition and Processing</p>
   <ul className="list-disc list-inside ml-6 space-y-1">
-    <li>SYS-1.1: The system shall consistently retrieve Chicago police report data.<i>(To ensure up-to-date information.) </i></li>
-    <li>SYS-1.2: The system should forecast crime likelihood using a prediction model.<i>(To provide forward-looking insights.) </i></li>
+    <li>SYS-1.1: The system shall consistently retrieve Chicago police report data.<i> (To ensure up-to-date information.) </i></li>
+    <li>SYS-1.2: The system should forecast crime likelihood using a prediction model.<i> (To provide forward-looking insights.) </i></li>
   </ul>
 
   <p className="mt-4 font-bold">Map Generation and Display</p>
   <ul className="list-disc list-inside ml-6 space-y-1">
-    <li>SYS-2.1: The system shall generate an interactive map of Chicago divided according to Chicago's 77 official neighborhoods.<i>(To enable intuitive exploration.)</i></li>
-    <li>SYS-2.2: The system shall display crime intensity and type using region-based color shading.<i>(To communicate patterns clearly.)</i></li>
+    <li>SYS-2.1: The system shall generate an interactive map of Chicago divided according to Chicago's 77 official neighborhoods.<i> (To enable intuitive exploration.)</i></li>
+    <li>SYS-2.2: The system shall display crime intensity and type using region-based color shading.<i> (To communicate patterns clearly.)</i></li>
   </ul>
 
   <p className="mt-4 font-bold">User Interaction and Output</p>
@@ -104,45 +104,45 @@ export default function DocumentPage() {
   <h4 className="text-xl font-semibold mt-6">4.2 System Non-Functional Requirements</h4>
   <p className="mt-4 font-bold">Performance and Availability</p>
   <ul className="list-disc list-inside ml-6 space-y-1">
-    <li>SYS-NFR-1.1: The system shall have 99% uptime over a rolling 30-day period.<i>(To ensure availability.)</i></li>
-    <li>SYS-NFR-1.2: The system should render the map within 2 seconds for 90% of users on standard 4G connections.<i>(To optimize performance.)</i></li>
-    <li>SYS-NFR-1.3: The system shall have a top-5 prediction accuracy of 70% or greater.<i>(To establish the reliability of the system.)</i></li>
-    <li>SYS-NFR-1.4: The system shall support concurrent access by at least 500 users with no more than 15% degradation in responsiveness.<i>(To ensure the application remains usable during peak hours or high-traffic scenarios.)</i></li>
-    <li>SYS-NFR-1.5: Crime prediction results shall be generated within 3 seconds under standard operating conditions.<i>(To provide timely feedback to users without interrupting navigation or planning decisions.)</i></li>
+    <li>SYS-NFR-1.1: The system shall have 99% uptime over a rolling 30-day period.<i> (To ensure availability.)</i></li>
+    <li>SYS-NFR-1.2: The system should render the map within 2 seconds for 90% of users on standard 4G connections.<i> (To optimize performance.)</i></li>
+    <li>SYS-NFR-1.3: The system shall have a top-5 prediction accuracy of 70% or greater.<i> (To establish the reliability of the system.)</i></li>
+    <li>SYS-NFR-1.4: The system shall support concurrent access by at least 500 users with no more than 15% degradation in responsiveness.<i> (To ensure the application remains usable during peak hours or high-traffic scenarios.)</i></li>
+    <li>SYS-NFR-1.5: Crime prediction results shall be generated within 3 seconds under standard operating conditions.<i> (To provide timely feedback to users without interrupting navigation or planning decisions.)</i></li>
   </ul>
 
   <p className="mt-4 font-bold">Scalability and Maintainability</p>
   <ul className="list-disc list-inside ml-6 space-y-1">
-    <li>SYS-NFR-2.1: The system codebase shall follow modular architecture principles to allow updates without affecting unrelated modules.<i>(To support maintainability, facilitate future development, and reduce the risk of unintended bugs.)</i></li>
-    <li>SYS-NFR-2.2: The system shall support horizontal scaling to handle increased user demand during peak usage hours.<i>(To ensure consistent system performance as user load increases.)</i></li>
-    <li>SYS-NFR-2.3: Configuration changes shall be updatable without requiring system downtime.<i>(To support real-time system tuning and reduce disruption during updates.)</i></li>
+    <li>SYS-NFR-2.1: The system codebase shall follow modular architecture principles to allow updates without affecting unrelated modules.<i> (To support maintainability, facilitate future development, and reduce the risk of unintended bugs.)</i></li>
+    <li>SYS-NFR-2.2: The system shall support horizontal scaling to handle increased user demand during peak usage hours.<i> (To ensure consistent system performance as user load increases.)</i></li>
+    <li>SYS-NFR-2.3: Configuration changes shall be updatable without requiring system downtime.<i> (To support real-time system tuning and reduce disruption during updates.)</i></li>
   </ul>
 
   <p className="mt-4 font-bold">Compatibility</p>
   <ul className="list-disc list-inside ml-6 space-y-1">
-    <li>SYS-NFR-3.1: The system shall be fully functional on mobile devices with ≥2GB RAM and Android 10/iOS 13 or newer.<i>(To ensure mobile compatibility.)</i></li>
-    <li>SYS-NFR-3.2: The system should be compatible with Windows 11+, macOS 11+, and Android 10+.<i>(To support a broad user base.)</i></li>
+    <li>SYS-NFR-3.1: The system shall be fully functional on mobile devices with ≥2GB RAM and Android 10/iOS 13 or newer.<i> (To ensure mobile compatibility.)</i></li>
+    <li>SYS-NFR-3.2: The system should be compatible with Windows 11+, macOS 11+, and Android 10+.<i> (To support a broad user base.)</i></li>
   </ul>
 
   <p className="mt-4 font-bold">Usability & Accessibility</p>
   <ul className="list-disc list-inside ml-6 space-y-1">
-    <li>SYS-NFR-4.1: The system interface shall allow new users to perform basic operations with no training and ≤3 clicks.<i>(To reduce friction for first-time users and support accessibility goals.)</i></li>
-    <li>SYS-NFR-4.2: The system should comply with WCAG 2.1 Level AA to ensure accessibility for users with disabilities.<i>(To provide inclusive access to all users, including those with visual or motor impairments.)</i></li>
-    <li>SYS-NFR-4.3: A guided onboarding or tooltip system should be available for first-time users to assist with feature discovery.<i>(To improve the onboarding experience and reduce confusion for new users.)</i></li>
+    <li>SYS-NFR-4.1: The system interface shall allow new users to perform basic operations with no training and ≤3 clicks.<i> (To reduce friction for first-time users and support accessibility goals.)</i></li>
+    <li>SYS-NFR-4.2: The system should comply with WCAG 2.1 Level AA to ensure accessibility for users with disabilities.<i> (To provide inclusive access to all users, including those with visual or motor impairments.)</i></li>
+    <li>SYS-NFR-4.3: A guided onboarding or tooltip system should be available for first-time users to assist with feature discovery.<i> (To improve the onboarding experience and reduce confusion for new users.)</i></li>
   </ul>
 
   <p className="mt-4 font-bold">Privacy and Ethics</p>
   <ul className="list-disc list-inside ml-6 space-y-1">
-    <li>SYS-NFR-5.1: The system shall not store any IP addresses or location data unless the user gives explicit consent.<i>(To uphold user privacy.)</i></li>
-    <li>SYS-NFR-5.2: The system shall implement privacy masking techniques to prevent the identification of individuals or addresses from crime data.<i>(To prevent misuse or harm.)</i></li>
-    <li>SYS-NFR-5.3: User data shall not be shared with third parties unless required by law or explicitly agreed to by the user.<i>(To uphold user privacy and trust, and to comply with legal data protection standards.)</i></li>
-    <li>SYS-NFR-5.4: The system shall log all data access and modification events for auditability, but only store logs that are anonymized.<i>(To enable accountability while protecting user identity and behavior.)</i></li>
+    <li>SYS-NFR-5.1: The system shall not store any IP addresses or location data unless the user gives explicit consent.<i> (To uphold user privacy.)</i></li>
+    <li>SYS-NFR-5.2: The system shall implement privacy masking techniques to prevent the identification of individuals or addresses from crime data.<i> (To prevent misuse or harm.)</i></li>
+    <li>SYS-NFR-5.3: User data shall not be shared with third parties unless required by law or explicitly agreed to by the user.<i> (To uphold user privacy and trust, and to comply with legal data protection standards.)</i></li>
+    <li>SYS-NFR-5.4: The system shall log all data access and modification events for auditability, but only store logs that are anonymized.<i> (To enable accountability while protecting user identity and behavior.)</i></li>
   </ul>
 </section>
 
 <section className="space-y-6">
   <h3 className="text-2xl font-bold border-b pb-1">5. System Evolution</h3>
-  <p className="indent-6">The following features and improvements are future-oriented concepts that are not currently implemented, but represent directions for potential expansion and refinement of the crime mapping and forecasting system. These ideas are based on anticipated user needs, feedback from surveys and focus groups, and limitations observed in the initial prototype.</p>
+  <p>The following features and improvements are future-oriented concepts that are not currently implemented, but represent directions for potential expansion and refinement of the crime mapping and forecasting system. These ideas are based on anticipated user needs, feedback from surveys and focus groups, and limitations observed in the initial prototype.</p>
 
   <div className="space-y-6">
     <div>
