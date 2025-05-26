@@ -5,6 +5,16 @@ export default function DocumentPage() {
         <h1 className="text-center text-3xl font-bold mb-2">Software Requirements Specification (SRS)</h1>
         <h2 className="text-center text-xl font-medium mb-8">Crime Mapping and Forecasting Application</h2>
 
+
+        <div className="flex justify-center mb-8">
+          <img 
+            src="/Requirements.png" 
+            alt="Requirements Diagram" 
+            className="w-full max-w-2xl rounded shadow-md"
+          />
+        </div>
+
+
         <article className="space-y-6">
           <section>
             <h3 className="text-xl font-bold">Preface</h3>
