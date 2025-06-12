@@ -1,8 +1,8 @@
-'use client' // only if using `app/` directory
+
 
 import Image from 'next/image'
 
-export default function SystemDesignPage() {
+export default function SystemDesign() {
   return (
     <div className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen px-6 py-12">
       <div className="max-w-4xl mx-auto">
