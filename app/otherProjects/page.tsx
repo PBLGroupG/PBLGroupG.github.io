@@ -1,24 +1,24 @@
 export default function OtherProjectsPage() {
   return (
-    <section className="min-h-screen px-6 py-20 bg-gray-100 transition-colors">
+    <section className="min-h-screen px-6 py-20 bg-gray-100 dark:bg-gray-900 transition-colors">
       <div className="max-w-5xl mx-auto animate-fadeIn space-y-12">
-        <h1 className="text-center text-6xl font-bold text-gray-900 mb-12">
+        <h1 className="text-center text-6xl font-bold text-gray-900 dark:text-gray-100 mb-12">
           Other Projects
         </h1>
 
         <div className="overflow-x-auto">
-          <table className="min-w-full text-left border border-gray-300 rounded-lg">
-            <thead className="bg-gray-200">
+          <table className="min-w-full text-left border border-gray-300 dark:border-gray-700 rounded-lg">
+            <thead className="bg-gray-200 dark:bg-gray-800">
               <tr>
-                <th className="px-6 py-3 text-lg font-semibold">Application</th>
-                <th className="px-6 py-3 text-lg font-semibold">Pros</th>
-                <th className="px-6 py-3 text-lg font-semibold">Cons</th>
+                <th className="px-6 py-3 text-lg font-semibold text-gray-900 dark:text-gray-100">Application</th>
+                <th className="px-6 py-3 text-lg font-semibold text-gray-900 dark:text-gray-100">Pros</th>
+                <th className="px-6 py-3 text-lg font-semibold text-gray-900 dark:text-gray-100">Cons</th>
               </tr>
             </thead>
-            <tbody className="bg-white text-gray-700">
-              <tr className="border-t border-gray-300">
+            <tbody className="bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200">
+              <tr className="border-t border-gray-300 dark:border-gray-700">
                 <td className="px-6 py-4 font-medium">
-                  <a href="https://gis.chicagopolice.org/pages/apps" className="text-blue-600 underline">CLEARmap (Chicago Police Department)</a>
+                  <a href="https://gis.chicagopolice.org/pages/apps" className="text-blue-600 dark:text-blue-400 underline">CLEARmap (Chicago Police Department)</a>
                 </td>
                 <td className="px-6 py-4">
                   - Multiple tools: crime reporting, offender maps, statistics.<br/>
@@ -26,14 +26,14 @@ export default function OtherProjectsPage() {
                   - Interactive crime icons.
                 </td>
                 <td className="px-6 py-4">
-                  - Grouped \"other crimes\".<br/>
+                  - Grouped "other crimes".<br/>
                   - Poor mobile experience.<br/>
                   - No predictive analytics.
                 </td>
               </tr>
-              <tr className="border-t border-gray-300">
+              <tr className="border-t border-gray-300 dark:border-gray-700">
                 <td className="px-6 py-4 font-medium">
-                  <a href="https://www.crimeometer.com/embeddable-crime-map" className="text-blue-600 underline">Crimeometer</a>
+                  <a href="https://www.crimeometer.com/embeddable-crime-map" className="text-blue-600 dark:text-blue-400 underline">Crimeometer</a>
                 </td>
                 <td className="px-6 py-4">
                   - Heatmaps and risk maps.<br/>
@@ -46,9 +46,9 @@ export default function OtherProjectsPage() {
                   - No predictive analytics.
                 </td>
               </tr>
-              <tr className="border-t border-gray-300">
+              <tr className="border-t border-gray-300 dark:border-gray-700">
                 <td className="px-6 py-4 font-medium">
-                  <a href="https://www.crimeandplace.com/features.html" className="text-blue-600 underline">Crime and Place</a>
+                  <a href="https://www.crimeandplace.com/features.html" className="text-blue-600 dark:text-blue-400 underline">Crime and Place</a>
                 </td>
                 <td className="px-6 py-4">
                   - Good for travelers.<br/>
@@ -61,9 +61,9 @@ export default function OtherProjectsPage() {
                   - No incident-level details.
                 </td>
               </tr>
-              <tr className="border-t border-gray-300">
+              <tr className="border-t border-gray-300 dark:border-gray-700">
                 <td className="px-6 py-4 font-medium">
-                  <a href="https://igarape.org.br/en/tech/crimeradar/" className="text-blue-600 underline">CrimeRadar</a>
+                  <a href="https://igarape.org.br/en/tech/crimeradar/" className="text-blue-600 dark:text-blue-400 underline">CrimeRadar</a>
                 </td>
                 <td className="px-6 py-4">
                   - Predictive modeling.<br/>
@@ -74,9 +74,9 @@ export default function OtherProjectsPage() {
                   - Public platform shut down.
                 </td>
               </tr>
-              <tr className="border-t border-gray-300">
+              <tr className="border-t border-gray-300 dark:border-gray-700">
                 <td className="px-6 py-4 font-medium">
-                  <a href="https://apps.apple.com/gb/app/crime-map-watch-uk/id1506650460" className="text-blue-600 underline">Crime Map Watch UK</a>
+                  <a href="https://apps.apple.com/gb/app/crime-map-watch-uk/id1506650460" className="text-blue-600 dark:text-blue-400 underline">Crime Map Watch UK</a>
                 </td>
                 <td className="px-6 py-4">
                   - Search by postcode.<br/>
@@ -88,9 +88,9 @@ export default function OtherProjectsPage() {
                   - No prediction feature.
                 </td>
               </tr>
-              <tr className="border-t border-gray-300">
+              <tr className="border-t border-gray-300 dark:border-gray-700">
                 <td className="px-6 py-4 font-medium">
-                  <a href="https://webapp.safecity.in" className="text-blue-600 underline">Safecity</a>
+                  <a href="https://webapp.safecity.in" className="text-blue-600 dark:text-blue-400 underline">Safecity</a>
                 </td>
                 <td className="px-6 py-4">
                   - Crowdsourced reporting.<br/>

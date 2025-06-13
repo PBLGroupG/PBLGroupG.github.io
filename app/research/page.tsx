@@ -1,4 +1,10 @@
+'use client'
+import { useState } from 'react'
+
 export default function ResearchPage() {
+  const [searchQuery, setSearchQuery] = useState('')
+  const [openSections, setOpenSections] = useState<{ [key: number]: boolean }>({})
+
   const sections = [
     {
       title: "Crime Mapping, GIS, and Predictive Models",
@@ -39,7 +45,7 @@ export default function ResearchPage() {
           link: "https://link.springer.com/article/10.1007/s10610-021-09501-7"
         },
         {
-          citation: '"Mapping the Way to Safer Urban Mobility." EMBARQ Networks.',
+          citation: "\"Mapping the Way to Safer Urban Mobility.\" EMBARQ Networks.",
           summary: "Explores safe city design and mobility-focused crime risk mitigation strategies, potentially relevant for routing tools.",
           link: "https://www.smartcitiesdive.com/ex/sustainablecitiescollective/mapping-way-safer-urban-mobility/1049916/"
         },
@@ -102,39 +108,78 @@ export default function ResearchPage() {
     },
   ];
 
+  const toggleSection = (index: number) => {
+    setOpenSections((prev) => ({ ...prev, [index]: !prev[index] }))
+  }
+
+  const filterPapers = (papers: typeof sections[0]['papers']) =>
+    papers.filter(
+      (paper) =>
+        paper.citation.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        paper.summary.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+
   return (
-    <section className="min-h-screen px-4 py-20 bg-gray-100 transition-colors">
+    <section className="min-h-screen px-4 py-20 bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-4xl mx-auto animate-fade-in">
-        <h1 className="text-center text-6xl font-bold text-gray-900 mb-12">
+        <h1 className="text-center text-6xl font-bold text-gray-900 dark:text-gray-100 mb-8">
           Research Literature
         </h1>
-  
-        {sections.map((section, idx) => (
-          <div key={idx} className="mb-14">
-            <h2 className="text-3xl font-semibold text-gray-800 mb-4">
-              {section.title}
-            </h2>
-  
-            <div className="max-h-96 overflow-y-auto border rounded-xl p-5 bg-white shadow-md space-y-6">
-              {section.papers.map((paper, i) => (
-                <div key={i}>
-                  <p className="text-gray-800 font-medium">
-                    <a
-                      href={paper.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline hover:text-blue-600"
-                    >
-                      {paper.citation}
-                    </a>
-                  </p>
-                  <p className="text-gray-600 text-justify">{paper.summary}</p>
+
+        {/* Search Bar */}
+        <div className="mb-12">
+          <input
+            type="text"
+            placeholder="Search papers..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400"
+          />
+        </div>
+
+        {/* Sections */}
+        {sections.map((section, idx) => {
+          const filteredPapers = filterPapers(section.papers)
+          const isOpen = openSections[idx] ?? true
+
+          return (
+            <div key={idx} className="mb-10">
+              <button
+                onClick={() => toggleSection(idx)}
+                className="w-full text-left text-3xl font-semibold text-gray-800 dark:text-gray-100 mb-2 hover:underline"
+              >
+                {section.title} {isOpen ? '−' : '+'}
+              </button>
+
+              {isOpen && filteredPapers.length > 0 && (
+                <div className="max-h-96 overflow-y-auto border border-gray-200 dark:border-gray-700 rounded-xl p-5 bg-white dark:bg-gray-800 shadow-md space-y-6">
+                  {filteredPapers.map((paper, i) => (
+                    <div key={i}>
+                      <p className="text-gray-800 dark:text-gray-100 font-medium">
+                        <a
+                          href={paper.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-blue-600 dark:hover:text-blue-400"
+                        >
+                          {paper.citation}
+                        </a>
+                      </p>
+                      <p className="text-gray-600 dark:text-gray-300 text-justify">
+                        {paper.summary}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              )}
+
+              {isOpen && filteredPapers.length === 0 && (
+                <p className="text-gray-500 dark:text-gray-400 italic">No matching papers.</p>
+              )}
             </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </section>
-  );
+  )
 }

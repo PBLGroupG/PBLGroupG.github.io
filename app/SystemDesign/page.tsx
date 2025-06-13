@@ -1,22 +1,22 @@
-
-
 import Image from 'next/image'
 
 export default function SystemDesign() {
   return (
-    <div className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen px-6 py-12">
+    <div className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen px-6 py-12 transition-colors duration-300">
       <div className="max-w-4xl mx-auto">
         {/* Page Title */}
-        <h1 className="text-3xl font-bold mb-8 text-center">
+        <h1 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100">
           System Design Diagrams
         </h1>
 
         {/* Diagram Section 1 */}
         <section className="mb-12">
-          <h2 className="text-xl font-semibold mb-4">1. Use Case Diagram</h2>
-          <div className="border rounded-lg p-4 shadow-md bg-gray-50 dark:bg-gray-800">
+          <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+            1. Use Case Diagram
+          </h2>
+          <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-md bg-gray-50 dark:bg-gray-800">
             <Image
-              src="/images/usecase_diagram.png" // put your image in public/images/
+              src="/images/usecase_diagram.png"
               alt="Use Case Diagram"
               width={800}
               height={600}
@@ -27,8 +27,10 @@ export default function SystemDesign() {
 
         {/* Diagram Section 2 */}
         <section className="mb-12">
-          <h2 className="text-xl font-semibold mb-4">2. Sequence Diagram</h2>
-          <div className="border rounded-lg p-4 shadow-md bg-gray-50 dark:bg-gray-800">
+          <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
+            2. Sequence Diagram
+          </h2>
+          <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-md bg-gray-50 dark:bg-gray-800">
             <Image
               src="/images/sequence_diagram.png"
               alt="Sequence Diagram"

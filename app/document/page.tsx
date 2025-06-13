@@ -1,11 +1,11 @@
 export default function DocumentPage() {
   return (
-    <section className="min-h-screen px-6 py-20 bg-white text-black transition-colors">
-      <div className="max-w-4xl mx-auto space-y-12 font-sans text-[16px] leading-relaxed">
-        <header className="text-center">
-          <h1 className="text-4xl font-extrabold mb-2">Software Requirements Specification (SRS)</h1>
-          <h2 className="text-2xl font-medium text-gray-700">Crime Mapping and Forecasting Application</h2>
-        </header>
+    <section className="min-h-screen px-6 py-20 bg-white dark:bg-gray-900 text-black dark:text-gray-100 transition-colors">
+    <div className="max-w-4xl mx-auto space-y-12 font-sans text-[16px] leading-relaxed">
+      <header className="text-center">
+        <h1 className="text-4xl font-extrabold mb-2">Software Requirements Specification (SRS)</h1>
+        <h2 className="text-2xl font-medium text-gray-700 dark:text-gray-300">Crime Mapping and Forecasting Application</h2>
+      </header>
 
         <article className="space-y-14">
           <section className="space-y-6">
