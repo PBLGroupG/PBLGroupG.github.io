@@ -1,3 +1,4 @@
+import './globals.css'
 import { ThemeProvider } from 'next-themes'
 import AnimatedHeader from '../components/AnimatedHeader'
 import AnimatedMain from '../components/AnimatedMain'
