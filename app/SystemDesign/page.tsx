@@ -16,7 +16,7 @@ export default function SystemDesign() {
           </h2>
           <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-md bg-gray-50 dark:bg-gray-800">
             <Image
-              src="/images/usecase_diagram.png"
+              src="/Users/enriqco/Documents/Github2.0/PBLGroupG.github.io/public/useCase.png"
               alt="Use Case Diagram"
               width={800}
               height={600}
@@ -28,11 +28,11 @@ export default function SystemDesign() {
         {/* Diagram Section 2 */}
         <section className="mb-12">
           <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
-            2. Sequence Diagram
+            2. Class Diagram
           </h2>
           <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-md bg-gray-50 dark:bg-gray-800">
             <Image
-              src="/images/sequence_diagram.png"
+              src="/Users/enriqco/Documents/Github2.0/PBLGroupG.github.io/public/classDiagram.png"
               alt="Sequence Diagram"
               width={800}
               height={600}
