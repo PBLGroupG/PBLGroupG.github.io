@@ -11,15 +11,15 @@ const groupMembers = [
 
 export default function HomePage() {
   return (
-    <section className="min-h-screen px-4 py-20 bg-gray-100 transition-colors">
+    <section className="min-h-screen px-4 py-20 bg-gray-100 dark:bg-gray-900 transition-colors">
       <div className="max-w-5xl w-full animate-fadeIn mx-auto">
-        <h1 className="text-center text-6xl font-bold text-gray-900 mb-16">
+        <h1 className="text-center text-6xl font-bold text-gray-900 dark:text-gray-100 mb-16">
           PBL Group G
         </h1>
 
         {/* Sections */}
         <div className="grid gap-12">
-          {[ 
+          {[
             {
               title: 'Intro',
               text: `Smart cities use digital technology and data to improve urban life, including public safety. By combining sensors, open data, and predictive analytics, smart cities can respond more effectively to crime and inform citizens more. Traditional crime awareness relies on word of mouth or press coverage, and this tends to distort public opinion and generate unnecessary fear or disinformation.
@@ -47,11 +47,12 @@ https://data.cityofchicago.org/Public-Safety/Crimes-2025/t7ek-mgzi/data_preview
 Weather has also been shown to be a significant factor in crime rates, so historical weather records will be used.`,
             },
           ].map((section, index) => (
-            <div key={index} className="p-6 rounded-2xl bg-white shadow-md">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                {section.title}
-              </h2>
-              <p className="text-gray-700 text-lg leading-relaxed text-justify whitespace-pre-line">
+            <div
+              key={index}
+              className="p-6 rounded-2xl bg-white dark:bg-gray-800 shadow-md text-gray-900 dark:text-gray-100"
+            >
+              <h2 className="text-3xl font-bold mb-4">{section.title}</h2>
+              <p className="text-lg leading-relaxed text-justify whitespace-pre-line">
                 {section.text}
               </p>
             </div>
@@ -70,11 +71,11 @@ Weather has also been shown to be a significant factor in crime rates, so histor
 
         {/* Group Member Names */}
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8">
             Group Members
           </h2>
 
-          <ul className="space-y-2 text-lg text-gray-800">
+          <ul className="space-y-2 text-lg text-gray-800 dark:text-gray-200">
             {groupMembers.map((name, index) => (
               <li key={index}>{name}</li>
             ))}
