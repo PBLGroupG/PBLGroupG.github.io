@@ -1,32 +1,17 @@
-import { ThemeProvider } from 'next-themes'
-import AnimatedHeader from '../components/AnimatedHeader'
-import AnimatedMain from '../components/AnimatedMain'
+'use client'
 
-export const metadata = {
-  title: 'PBL Group G',
-  description: 'Explore cutting-edge research and ideas',
-}
+import { motion } from 'framer-motion'
+import { ReactNode } from 'react'
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function AnimatedMain({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <base href="PBLGroupG.github.io" />
-      </head>
-      <body className="bg-gradient-to-b from-gray-900 to-black text-gray-200 font-sans transition-colors duration-300 min-h-screen">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <AnimatedHeader />
-          <AnimatedMain>
-            <div className="rounded-3xl border border-white/10 bg-white/30 dark:bg-white/5 backdrop-blur-md shadow-xl p-6 sm:p-10">
-              {children}
-            </div>
-          </AnimatedMain>
-        </ThemeProvider>
-      </body>
-    </html>
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+      className="max-w-6xl mx-auto px-6 py-16"
+    >
+      {children}
+    </motion.main>
   )
 }
