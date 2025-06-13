@@ -18,11 +18,14 @@ export default function RootLayout({
       <head>
         <base href="PBLGroupG.github.io" />
       </head>
-      <body className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300 min-h-screen">
+      <body className="bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300 min-h-screen">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <AnimatedHeader />
-          <AnimatedMain>{children}</AnimatedMain>
-          {/* You can re-enable footer here if needed */}
+          <AnimatedMain>
+            <div className="rounded-3xl border border-white/10 bg-white/30 dark:bg-white/5 backdrop-blur-md shadow-xl">
+              {children}
+            </div>
+          </AnimatedMain>
         </ThemeProvider>
       </body>
     </html>
