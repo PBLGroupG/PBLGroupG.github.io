@@ -32,7 +32,7 @@ export default function SystemDesign() {
           </h2>
           <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-md bg-gray-50 dark:bg-gray-800">
             <Image
-              src="/classdiagram.drawio-2.png"
+              src="/ClassDiagram.png"
               alt="Sequence Diagram"
               width={1920}
               height={1080}
