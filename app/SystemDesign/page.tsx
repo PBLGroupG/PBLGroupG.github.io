@@ -34,8 +34,8 @@ export default function SystemDesign() {
             <Image
               src="/classDiagram.png"
               alt="Sequence Diagram"
-              width={1280}
-              height={960}
+              width={1920}
+              height={1080}
               className="rounded-md"
             />
           </div>
