@@ -11,10 +11,10 @@ export default function SystemDesign() {
     { title: '2. Class Diagram', src: '/classdiagram.drawio-2.svg' },
     { title: '3. State Diagram', src: '/StateDiagram-3.svg' },
     { title: '4. System Overview Diagram', src: '/SystemOverviewSVG.svg' },
-    { title: '5. CrimeForecasting Activity Diagram', src: '/CrimeForecastingSVG.svg' },
+    { title: '5. Crime Forecasting Activity Diagram', src: '/CrimeForecastingSVG.svg' },
     { title: '6.Rendering Map Sequence Diagram ', src: '/Sequence1.drawio-2.svg' },
-    { title: '7. CrimeForecaset Sequence Diagram', src: '/sequence2.drawio-2.svg' },
-    { title: '8. Daily Server Sequence Diagram 3', src: '/sequence3.drawio-2.svg' },
+    { title: '7. Crime Forecaset Sequence Diagram', src: '/sequence2.drawio-2.svg' },
+    { title: '8. Daily Server Updates Sequence Diagram ', src: '/sequence3.drawio-2.svg' },
   ]
 
   return (
