@@ -21,6 +21,8 @@ export default function AnimatedHeader() {
           <a href="/otherProjects" className="hover:underline hover:text-gray-300 transition">Other Projects</a>
           <a href="/document" className="hover:underline hover:text-gray-300 transition">Requirements Document</a>
           <a href="/SystemDesign" className="hover:underline hover:text-gray-300 transition">System Design</a>
+          <a href="/systemArchitecture" className="hover:underline hover:text-gray-300 transition">systemArchitecture</a>
+
           <ThemeToggle />
         </nav>
       </div>
