@@ -15,7 +15,7 @@ export default function SystemArchitecture() {
           <h1 className="text-4xl font-bold">System Architecture</h1>
           <div className="w-full flex justify-center">
   <img
-    src="/datalevel.svg"
+    src="/dataLevel.svg"
     alt="Architecture Overview Diagram"
     className="w-full max-w-3xl h-auto border border-gray-300 dark:border-gray-600 rounded"
   />
