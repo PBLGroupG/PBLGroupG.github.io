@@ -1,5 +1,5 @@
 {
   "/document/page": "app/document/page.js",
-  "/page": "app/page.js",
-  "/systemArchitecture/page": "app/systemArchitecture/page.js"
+  "/systemArchitecture/page": "app/systemArchitecture/page.js",
+  "/page": "app/page.js"
 }

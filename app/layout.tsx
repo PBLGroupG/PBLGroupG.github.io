@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <base href="PBLGroupG.github.io" />
+      <base href="/" />
         <link rel="icon" href="/icon.ico" />
         {/* Optional: Add a fallback title in case metadata doesn't render */}
         <title>PBL Group G</title>
