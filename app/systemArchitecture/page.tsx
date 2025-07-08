@@ -47,7 +47,7 @@ export default function SystemArchitecture() {
             </div>
 <div className="w-full flex justify-center">
 <img
-    src="/AD.svg"
+    src="/A3.svg"
     alt="Architecture Overview Diagram"
     className="w-full max-w-3xl h-auto border border-gray-300 dark:border-gray-600 rounded"
     
