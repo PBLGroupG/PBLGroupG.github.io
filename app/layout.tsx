@@ -17,6 +17,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <base href="PBLGroupG.github.io" />
+        <link rel="icon" href="/icon.jpg" />
+        {/* Optional: Add a fallback title in case metadata doesn't render */}
+        <title>PBL Group G</title>
       </head>
       <body className="bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300 min-h-screen">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
