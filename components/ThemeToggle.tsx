@@ -13,10 +13,14 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
-      className="p-2 rounded-full bg-blue-700 dark:bg-blue-600 hover:bg-blue-500 dark:hover:bg-blue-700 transition"
+      className="p-2 rounded-full bg-[#8C3A3A] dark:bg-[#FCEFD9] hover:bg-[#702C2C] dark:hover:bg-[#ffeac4] transition"
       aria-label="Toggle dark mode"
     >
-      {darkMode ? <Sun className="w-5 h-5 text-yellow-300" /> : <Moon className="w-5 h-5 text-white" />}
+      {darkMode ? (
+        <Sun className="w-5 h-5 text-[#8C3A3A]" /> // Sun icon in maroon for light background
+      ) : (
+        <Moon className="w-5 h-5 text-[#FCEFD9]" /> // Moon icon in soft gold for dark background
+      )}
     </button>
   )
 }

@@ -15,7 +15,7 @@ export default function SystemArchitecture() {
           <h1 className="text-4xl font-bold">System Architecture</h1>
           <div className="w-full flex justify-center">
   <img
-    src="/dataLevel.svg"
+    src="/System Architecure.svg"
     alt="Architecture Overview Diagram"
     className="w-full max-w-3xl h-auto border border-gray-300 dark:border-gray-600 rounded"
   />
@@ -115,8 +115,8 @@ export default function SystemArchitecture() {
               <table className="w-full table-auto border border-gray-300 dark:border-gray-700">
                 <tbody>
                   {[
-                    ["Shaded Map", "External API that provides weather data, used as an input variable for the Forecasting System."],
-                    ["Forecasting Result", "The database storing historical Chicago police report data used for analysis and prediction."],
+                    ["Shaded Map", "The final, interactive map visualization rendered to the user, displaying crime intensity with color-shading."],
+                    ["Forecasting Result", "The specific output from the Forecasting System, presented to the user as crime likelihoods or probabilities."],
                     ["Crime Map Statistics", "Provides numerical insights and summaries of crime data."]
                   ].map(([term, desc], index) => (
                     <tr key={index} className="border-t border-gray-300 dark:border-gray-700">

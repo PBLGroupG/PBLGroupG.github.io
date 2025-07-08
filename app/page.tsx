@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Head from 'next/head'
 import {
   Book,
   AlertTriangle,
@@ -21,14 +22,24 @@ const sections = [
   {
     title: 'Intro',
     icon: Book,
-    text: `Smart cities use digital technology and data to improve urban life, including public safety. By combining sensors, open data, and predictive analytics, smart cities can respond more effectively to crime and inform citizens more. Traditional crime awareness relies on word of mouth or press coverage, and this tends to distort public opinion and generate unnecessary fear or disinformation.
-
-Crime mapping is among the most significant smart city technologies, allowing visualization of where and when crimes occur. It makes transparency easier, guides individual safety decisions, and even predicts crime patterns in the future. When built on credible data and thorough analysis, it empowers citizens and aids city governments in making smarter resource allocation. In this project, such technology will be deployed in Chicago to close the gap between perceived and actual crime levels.`,
+    text: `Smart cities use digital technology and data to improve urban life, including public safety. 
+    By combining sensors, open data, and predictive analytics, smart cities can respond more effectively to crime and inform citizens more. 
+    Traditional crime awareness relies on word of mouth or press coverage, and this tends to distort public opinion and generate unnecessary fear or disinformation.  
+    Crime mapping is among the most significant smart city technologies, allowing visualization of where and when crimes occur. 
+    It makes transparency easier, guides individual safety decisions, and even predicts crime patterns in the future. 
+    When built on credible data and thorough analysis, it empowers citizens and aids city governments in making smarter resource allocation. 
+    In this project, such technology will be deployed in Chicago to close the gap between perceived and actual crime levels.`,
   },
   {
     title: 'Problem',
     icon: AlertTriangle,
-    text: `Knowledge of high crime areas typically comes from word of mouth, or one’s intuition. This can create misconceptions on actual local crime rates. An underestimation of crime rates can lead to someone being more likely to be the victim of a crime. While crime victimization is always a problem, the public's hypersensitivity to it can be a problem of its own. A fear of crime can cause psychological stress, worsening physical health, and reduced economic activity. The public perception of crime also does not necessarily line up with reality. Specifically in the United States, the public has been overestimating crime levels in recent years.`,
+    text: `Knowledge of high crime areas typically comes from word of mouth, or one’s intuition. 
+    This can create misconceptions on actual local crime rates. An underestimation of crime rates can lead to someone being more l
+    ikely to be the victim of a crime. While crime victimization is always a problem, the public's 
+    hypersensitivity to it can be a problem of its own. A fear of crime can cause psychological stress, 
+    worsening physical health, and reduced economic activity. The public perception of crime also does not necessarily 
+    line up with reality. 
+    Specifically in the United States, the public has been overestimating crime levels in recent years.`,
   },
   {
     title: 'Literature Summary',
@@ -43,82 +54,86 @@ Crime mapping is among the most significant smart city technologies, allowing vi
   {
     title: 'Data',
     icon: Database,
-    text: `The city of Chicago hosts a public, up-to-date, detailed dataset, with the type of crime committed, the time of the crime, the street, a description of the location, as well as more specific details depending on the kind of crime.
-
-https://data.cityofchicago.org/Public-Safety/Crimes-2025/t7ek-mgzi/data_preview
-
-Weather has also been shown to be a significant factor in crime rates, so historical weather records will be used.`,
+    text: `The city of Chicago hosts a public, up-to-date, detailed dataset, with the type of crime committed, the time of the crime, the street, a description of the location, as well as more specific details depending on the kind of crime.  https://data.cityofchicago.org/Public-Safety/Crimes-2025/t7ek-mgzi/data_preview  Weather has also been shown to be a significant factor in crime rates, so historical weather records will be used.`,
   },
 ]
 
 export default function HomePage() {
   return (
-    <section className="min-h-screen px-4 py-20 bg-gradient-to-br from-gray-100 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors">
-      <div className="max-w-5xl w-full animate-fadeIn mx-auto">
-        <h1 className="text-center text-6xl font-bold text-gray-900 dark:text-gray-100 mb-16">
-          PBL Group G
-        </h1>
+    <>
+      {/* Head for title and favicon */}
+      <Head>
+        <title>PBL Group G</title>
+        <link rel="icon" href="/icon.ico" />
+      </Head>
 
-        {/* Sections */}
-        <div className="grid gap-12 md:grid-cols-2">
-          {sections.map(({ title, text, icon: Icon }, index) => (
-            <div
-              key={index}
-              className="p-6 rounded-2xl bg-white dark:bg-gray-800 shadow-md text-gray-900 dark:text-gray-100 transform hover:scale-[1.01] transition-transform duration-300 ease-in-out"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <Icon className="w-6 h-6 text-stone-800 dark:text-white" />
-                <h2 className="text-2xl font-bold">{title}</h2>
-              </div>
-              <p className="text-base leading-relaxed text-justify whitespace-pre-line">
-                {text}
-              </p>
-            </div>
-          ))}
-        </div>
+      <section className="min-h-screen px-4 py-20 bg-gradient-to-br from-gray-100 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors">
+        <div className="max-w-5xl w-full animate-fadeIn mx-auto">
+          <h1 className="text-center text-6xl font-bold text-gray-900 dark:text-gray-100 mb-16">
+            PBL Group G
+          </h1>
 
-        {/* CTA Button */}
-        <div className="text-center mt-16 mb-20">
-          <a
-            href="/research"
-            className="inline-block bg-stone-800 text-white px-10 py-4 rounded-2xl text-lg font-semibold hover:bg-stone-700 hover:scale-105 transition-all duration-300"
-          >
-            Visit Literature Page
-          </a>
-        </div>
-
-        {/* Group Member Cards */}
-        <div className="max-w-4xl mx-auto mt-20">
-          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-8">
-            Group Members
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {groupMembers.map((name, index) => (
+          {/* Sections */}
+          <div className="grid gap-12 md:grid-cols-2">
+            {sections.map(({ title, text, icon: Icon }, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center bg-white dark:bg-gray-800 rounded-xl shadow-md p-4 hover:scale-[1.02] transition-transform duration-300"
+                className="p-6 rounded-2xl bg-white dark:bg-gray-800 shadow-md text-gray-900 dark:text-gray-100 transform hover:scale-[1.01] transition-transform duration-300 ease-in-out"
               >
-                <div className="w-16 h-16 rounded-full bg-stone-700 dark:bg-gray-300 flex items-center justify-center text-white dark:text-gray-900 font-semibold text-xl mb-3">
-                  {name
-                    .split(' ')
-                    .map(word => word[0])
-                    .slice(0, 2)
-                    .join('')}
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon className="w-6 h-6 text-stone-800 dark:text-white" />
+                  <h2 className="text-2xl font-bold">{title}</h2>
                 </div>
-                <p className="text-center text-lg font-medium text-gray-900 dark:text-gray-100">
-                  {name}
+                <p className="text-base leading-relaxed text-justify whitespace-pre-line">
+                  {text}
                 </p>
               </div>
             ))}
           </div>
-        </div>
 
-        {/* Footer */}
-        <footer className="mt-16 text-center text-sm text-gray-600 dark:text-gray-400">
-          © 2025 Group G – Ritsumeikan University
-        </footer>
-      </div>
-    </section>
+          {/* CTA Button */}
+          <div className="text-center mt-16 mb-20">
+            <a
+              href="/research"
+              className="inline-block bg-stone-800 text-white px-10 py-4 rounded-2xl text-lg font-semibold hover:bg-stone-700 hover:scale-105 transition-all duration-300"
+            >
+              Visit Literature Page
+            </a>
+          </div>
+
+          {/* Group Member Cards */}
+          <div className="max-w-4xl mx-auto mt-20">
+            <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-8">
+              Group Members
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {groupMembers.map((name, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center bg-white dark:bg-gray-800 rounded-xl shadow-md p-4 hover:scale-[1.02] transition-transform duration-300"
+                >
+                  <div className="w-16 h-16 rounded-full bg-stone-700 dark:bg-gray-300 flex items-center justify-center text-white dark:text-gray-900 font-semibold text-xl mb-3">
+                    {name
+                      .split(' ')
+                      .map(word => word[0])
+                      .slice(0, 2)
+                      .join('')}
+                  </div>
+                  <p className="text-center text-lg font-medium text-gray-900 dark:text-gray-100">
+                    {name}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Footer */}
+          <footer className="mt-16 text-center text-sm text-gray-600 dark:text-gray-400">
+            © 2025 Group G – Ritsumeikan University
+          </footer>
+        </div>
+      </section>
+    </>
   )
 }

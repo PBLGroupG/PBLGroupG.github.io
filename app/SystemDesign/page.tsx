@@ -3,6 +3,8 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
+
+
 export default function SystemDesign() {
   const [zoomedImage, setZoomedImage] = useState<string | null>(null)
 
