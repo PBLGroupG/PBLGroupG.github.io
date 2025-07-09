@@ -86,11 +86,11 @@ export default function HomePage() {
           
           {/* Logo Image */}
           <div className="flex justify-center mb-6">
-            <img
-              src="/logo.png" // <- Replace with your logo image path
-              alt="CrimeMapR Logo"
-              className="w-32 h-auto"
-            />
+          <img
+  src="/logo.png"
+  alt="CrimeMapR Logo"
+  className="w-32 h-auto"
+/>
           </div>
 
           {/* Title */}
