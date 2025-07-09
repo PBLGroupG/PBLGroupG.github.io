@@ -1,5 +1,7 @@
 'use client'
+
 import { useState } from 'react'
+import Head from 'next/head'
 
 export default function ResearchPage() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -120,66 +122,74 @@ export default function ResearchPage() {
     )
 
   return (
-    <section className="min-h-screen px-4 py-20 bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
-      <div className="max-w-4xl mx-auto animate-fade-in">
-        <h1 className="text-center text-6xl font-bold text-gray-900 dark:text-gray-100 mb-8">
-          Research Literature
-        </h1>
+    <>
+      <Head>
+        <title>Literature Page - CrimeMapR</title>
+      </Head>
 
-        {/* Search Bar */}
-        <div className="mb-12">
-          <input
-            type="text"
-            placeholder="Search papers..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400"
-          />
+      <section className="min-h-screen px-4 py-20 bg-[#fdf8f3] dark:bg-[#2B1E1E] transition-colors duration-300">
+        <div className="max-w-4xl mx-auto animate-fadeIn">
+          <h1 className="text-center text-6xl font-bold text-[#361414] dark:text-[#FCEFD9] mb-10">
+            Research Literature
+          </h1>
+
+          {/* Search Bar */}
+          <div className="mb-12">
+            <input
+              type="text"
+              placeholder="Search papers..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#3B1F1F] text-gray-800 dark:text-[#FCEFD9] placeholder-gray-500 dark:placeholder-[#dabfbf]"
+            />
+          </div>
+
+          {/* Sections */}
+          {sections.map((section, idx) => {
+            const filteredPapers = filterPapers(section.papers)
+            const isOpen = openSections[idx] ?? true
+
+            return (
+              <div key={idx} className="mb-10">
+                <button
+                  onClick={() => toggleSection(idx)}
+                  className="w-full text-left text-3xl font-semibold text-[#361414] dark:text-[#FCEFD9] mb-4 hover:underline"
+                >
+                  {section.title} {isOpen ? '−' : '+'}
+                </button>
+
+                {isOpen && (
+                  <div className="rounded-2xl p-6 bg-white dark:bg-[#3B1F1F] shadow-lg border border-gray-200 dark:border-[#5c3d3d] space-y-6">
+                    {filteredPapers.length > 0 ? (
+                      filteredPapers.map((paper, i) => (
+                        <div key={i}>
+                          <p className="font-medium text-[#361414] dark:text-[#FCEFD9]">
+                            <a
+                              href={paper.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="underline hover:text-blue-600 dark:hover:text-blue-300"
+                            >
+                              {paper.citation}
+                            </a>
+                          </p>
+                          <p className="text-gray-700 dark:text-[#dabfbf] text-justify">
+                            {paper.summary}
+                          </p>
+                        </div>
+                      ))
+                    ) : (
+                      <p className="text-gray-500 dark:text-[#dabfbf] italic">
+                        No matching papers.
+                      </p>
+                    )}
+                  </div>
+                )}
+              </div>
+            )
+          })}
         </div>
-
-        {/* Sections */}
-        {sections.map((section, idx) => {
-          const filteredPapers = filterPapers(section.papers)
-          const isOpen = openSections[idx] ?? true
-
-          return (
-            <div key={idx} className="mb-10">
-              <button
-                onClick={() => toggleSection(idx)}
-                className="w-full text-left text-3xl font-semibold text-gray-800 dark:text-gray-100 mb-2 hover:underline"
-              >
-                {section.title} {isOpen ? '−' : '+'}
-              </button>
-
-              {isOpen && filteredPapers.length > 0 && (
-                <div className="max-h-96 overflow-y-auto border border-gray-200 dark:border-gray-700 rounded-xl p-5 bg-white dark:bg-gray-800 shadow-md space-y-6">
-                  {filteredPapers.map((paper, i) => (
-                    <div key={i}>
-                      <p className="text-gray-800 dark:text-gray-100 font-medium">
-                        <a
-                          href={paper.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline hover:text-blue-600 dark:hover:text-blue-400"
-                        >
-                          {paper.citation}
-                        </a>
-                      </p>
-                      <p className="text-gray-600 dark:text-gray-300 text-justify">
-                        {paper.summary}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {isOpen && filteredPapers.length === 0 && (
-                <p className="text-gray-500 dark:text-gray-400 italic">No matching papers.</p>
-              )}
-            </div>
-          )
-        })}
-      </div>
-    </section>
+      </section>
+    </>
   )
 }
