@@ -1,9 +1,12 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import ThemeToggle from './ThemeToggle'
 
 export default function AnimatedHeader() {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <motion.header
       initial={{ y: -80, opacity: 0 }}
@@ -15,13 +18,49 @@ export default function AnimatedHeader() {
         <a href="/" className="text-2xl font-bold hover:text-[#ffd9a8] transition">
           CrimeMapR
         </a>
-        <nav className="space-x-6 flex items-center">
-          <a href="/" className="hover:underline hover:text-[#ffd9a8] transition">Home</a>
+
+        <nav className="space-x-6 flex items-center relative">
+    
           <a href="/research" className="hover:underline hover:text-[#ffd9a8] transition">Literature</a>
           <a href="/otherProjects" className="hover:underline hover:text-[#ffd9a8] transition">Other Projects</a>
-          <a href="/document" className="hover:underline hover:text-[#ffd9a8] transition">Requirements Document</a>
-          <a href="/SystemDesign" className="hover:underline hover:text-[#ffd9a8] transition">System Design</a>
-          <a href="/systemArchitecture" className="hover:underline hover:text-[#ffd9a8] transition">System Architecture</a>
+
+          {/* Project Phases Dropdown */}
+          <div
+            className="relative inline-block text-left"
+            onMouseEnter={() => setIsOpen(true)}
+            onMouseLeave={() => setIsOpen(false)}
+          >
+            <button
+              className="hover:underline hover:text-[#ffd9a8] transition focus:outline-none"
+            >
+              Project Phases
+            </button>
+
+            {isOpen && (
+              <div className="absolute z-50 mt-2 w-56 rounded-md shadow-lg bg-[#FCEFD9] dark:bg-[#3B1F1F] ring-1 ring-black ring-opacity-5">
+                <div className="py-1 text-sm">
+                  <a
+                    href="/document"
+                    className="block px-4 py-2 text-gray-800 dark:text-[#FCEFD9] hover:bg-[#ffe8c4] dark:hover:bg-[#5A2B2B] transition"
+                  >
+                    Requirements Document
+                  </a>
+                  <a
+                    href="/SystemDesign"
+                    className="block px-4 py-2 text-gray-800 dark:text-[#FCEFD9] hover:bg-[#ffe8c4] dark:hover:bg-[#5A2B2B] transition"
+                  >
+                    System Design
+                  </a>
+                  <a
+                    href="/systemArchitecture"
+                    className="block px-4 py-2 text-gray-800 dark:text-[#FCEFD9] hover:bg-[#ffe8c4] dark:hover:bg-[#5A2B2B] transition"
+                  >
+                    System Architecture
+                  </a>
+                </div>
+              </div>
+            )}
+          </div>
 
           <ThemeToggle />
         </nav>

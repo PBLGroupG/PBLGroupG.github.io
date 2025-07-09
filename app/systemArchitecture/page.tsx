@@ -13,7 +13,7 @@ export default function SystemArchitecture() {
 
       <div className="min-h-screen bg-[#fdf8f3] dark:bg-[#2B1E1E] text-black dark:text-[#FCEFD9] px-6 py-12 transition-colors">
         <div className="max-w-5xl mx-auto space-y-10">
-          <h1 className="text-4xl font-bold">System Architecture</h1>
+          <h1 className="text-5xl font-bold text-center">System Architecture</h1>
 
           {/* Top Diagram */}
           <SectionCard title="Architecture Overview Diagram">

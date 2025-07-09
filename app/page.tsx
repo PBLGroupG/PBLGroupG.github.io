@@ -108,16 +108,6 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="text-center mt-16 mb-20">
-            <a
-              href="/research"
-              className="inline-block bg-[#8C3A3A] text-white px-10 py-4 rounded-2xl text-lg font-semibold hover:bg-[#702C2C] hover:scale-105 transition-all duration-300"
-            >
-              Visit Literature Page
-            </a>
-          </div>
-
           {/* Group Member Cards */}
           <div className="max-w-4xl mx-auto mt-20">
             <h2 className="text-3xl font-bold text-center text-[#361414] dark:text-[#FCEFD9] mb-8">
@@ -147,7 +137,7 @@ export default function HomePage() {
 
           {/* Footer */}
           <footer className="mt-16 text-center text-sm text-[#555] dark:text-[#ccc]">
-            © 2025 Group G – Ritsumeikan University
+             2025 Group G – Ritsumeikan University
           </footer>
         </div>
       </section>

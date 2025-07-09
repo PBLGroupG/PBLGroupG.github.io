@@ -1,7 +1,7 @@
 {
+  "/SystemDesign/page": "app/SystemDesign/page.js",
   "/page": "app/page.js",
-  "/otherProjects/page": "app/otherProjects/page.js",
-  "/research/page": "app/research/page.js",
   "/systemArchitecture/page": "app/systemArchitecture/page.js",
-  "/SystemDesign/page": "app/SystemDesign/page.js"
+  "/document/page": "app/document/page.js",
+  "/otherProjects/page": "app/otherProjects/page.js"
 }
