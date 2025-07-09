@@ -32,7 +32,7 @@ export default function AnimatedHeader() {
         </a>
 
         <nav className="space-x-6 flex items-center relative">
-          <a href="/" className="hover:underline hover:text-[#ffd9a8] transition">Home</a>
+          
           <a href="/research" className="hover:underline hover:text-[#ffd9a8] transition">Literature</a>
           <a href="/otherProjects" className="hover:underline hover:text-[#ffd9a8] transition">Other Projects</a>
 
